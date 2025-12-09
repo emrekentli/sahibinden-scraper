@@ -57,8 +57,8 @@ class SahibindenScraper:
         with open(self.seen_ads_file, 'w', encoding='utf-8') as f:
             json.dump(list(self.seen_ads), f, ensure_ascii=False, indent=2)
 
-    def init_driver(self):
-        logging.info("Initializing undetected Chrome driver...")
+    def get_chrome_options(self):
+        """Chrome options oluştur - her seferinde yeni object"""
         options = uc.ChromeOptions()
 
         # Temel ayarlar
@@ -68,57 +68,64 @@ class SahibindenScraper:
         options.add_argument('--disable-web-security')
         options.add_argument('--disable-features=IsolateOrigins,site-per-process')
 
-        # Pencere boyutu (headless için önemli)
+        # Pencere boyutu
         options.add_argument('--window-size=1920,1080')
         options.add_argument('--start-maximized')
 
         # Bot tespitini zorlaştıran ek ayarlar
-        options.add_argument('--disable-blink-features=AutomationControlled')
-        options.add_argument('--exclude-switches=enable-automation')
         options.add_argument('--disable-extensions')
         options.add_argument('--disable-gpu')
         options.add_argument('--disable-infobars')
         options.add_argument('--disable-notifications')
 
-        # User agent (gerçek bir tarayıcı gibi görünmek için)
+        # User agent
         options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36')
 
         # Dil ayarları
         options.add_argument('--lang=tr-TR')
-        options.add_experimental_option('prefs', {
-            'intl.accept_languages': 'tr,tr-TR,en-US,en'
-        })
 
-        # enable-automation bayrağını kaldır
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option('useAutomationExtension', False)
+        return options
+
+    def init_driver(self):
+        logging.info("Initializing undetected Chrome driver...")
 
         try:
             # Version'ı otomatik tespit ettir, headless=False ama Xvfb kullanacağız
+            options = self.get_chrome_options()
             self.driver = uc.Chrome(options=options, headless=False, use_subprocess=True)
             logging.info("Driver initialized successfully")
 
             # JavaScript injection - webdriver flaglerini gizle
-            self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {
-                "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
-            })
-            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-
-        except Exception as e:
-            logging.error(f"Error initializing driver: {e}")
-            # Fallback olarak version_main belirterek dene
-            logging.info("Retrying with specific Chrome version...")
-            self.driver = uc.Chrome(options=options, version_main=131, headless=False, use_subprocess=True)
-            logging.info("Driver initialized successfully with version 131")
-
-            # JavaScript injection
             try:
                 self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {
                     "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
                 })
                 self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-            except:
-                pass
+                logging.info("Stealth JavaScript injected successfully")
+            except Exception as js_error:
+                logging.warning(f"Could not inject stealth JavaScript: {js_error}")
+
+        except Exception as e:
+            logging.error(f"Error initializing driver: {e}")
+            # Fallback olarak version_main belirterek dene - YENİ options object kullan
+            logging.info("Retrying with specific Chrome version...")
+            try:
+                options = self.get_chrome_options()  # Yeni options object
+                self.driver = uc.Chrome(options=options, version_main=131, headless=False, use_subprocess=True)
+                logging.info("Driver initialized successfully with version 131")
+
+                # JavaScript injection
+                try:
+                    self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {
+                        "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+                    })
+                    self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+                    logging.info("Stealth JavaScript injected successfully")
+                except Exception as js_error:
+                    logging.warning(f"Could not inject stealth JavaScript: {js_error}")
+            except Exception as retry_error:
+                logging.error(f"Failed to initialize driver even with version 131: {retry_error}")
+                raise
 
     def handle_cloudflare_challenge(self):
         try:
