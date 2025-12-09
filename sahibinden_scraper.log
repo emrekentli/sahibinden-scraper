@@ -1098,3 +1098,756 @@ Stopping scraper...
 2025-12-09 23:45:42,844 - INFO - 
 --- Processing listing 1/1 ---
 2025-12-09 23:45:42,844 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:45:56,495 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:45:56,495 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:45:56,495 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:45:56,495 - INFO -   Replaced parts: 1/1
+2025-12-09 23:45:56,495 - INFO -   Painted parts: 2/2
+2025-12-09 23:45:56,495 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:45:56,495 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:45:58,495 - INFO - 
+============================================================
+2025-12-09 23:45:58,496 - INFO - Checking brand: Fiat Egea
+2025-12-09 23:45:58,496 - INFO - ============================================================
+2025-12-09 23:45:58,496 - INFO - Navigating to: https://www.sahibinden.com/fiat-egea-1.6-multijet-urban-plus/otomatik?a109_max=2&a13_min=2020&pagingSize=50&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:46:14,430 - INFO - Search results page loaded
+2025-12-09 23:46:14,504 - INFO - Found listing: 1287176693 - 2020 MODEL FİAT EGEA 1.6 MLTJ 120HP URBAN PLUS SADECE 56BİNDE
+2025-12-09 23:46:14,504 - INFO - Found listing: 1287013973 - 68 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:46:14,505 - INFO - Found listing: 1287008164 - 59 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:46:14,505 - INFO - Found listing: 1287967983 - Fatih Aksaray mahallesi İstanbul
+2025-12-09 23:46:14,505 - INFO - Found listing: 1272838187 - -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:46:14,505 - INFO - Found listing: 1286989311 - 2020-MODEL-FİAT -EGEA-1.6-URBAN-­PLUS-60-BİNDE-O­TOMATİK-BAKIMLI
+2025-12-09 23:46:14,505 - INFO - Found listing: 1272843813 - -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:46:14,505 - INFO - Found listing: 1287321023 - ACİL 75 BİN KM DE SAHİBİNDEN
+2025-12-09 23:46:14,505 - INFO - Found listing: 1287181330 - DEĞİŞENSİZ TRAMERSİZ 3.5 PARÇA BOYALI
+2025-12-09 23:46:14,506 - INFO - Found listing: 1287031171 - GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:46:14,506 - INFO - Found listing: 1286954452 - 2020 MODEL 63BİNDE 1.6 DİZEL OTOMATİK BAKIMLI TEMİZ AİLE ARABASI
+2025-12-09 23:46:14,506 - INFO - Found listing: 1287024553 - GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:46:14,506 - INFO - Found listing: 1286957455 - 2020 MODEL 1.6MJET 120 HP EGA SW URBAN PLUS EMSALSİZ TEMİZLİKTE
+2025-12-09 23:46:14,506 - INFO - Found listing: 1286641021 - MY VİZYONDAN 2020 EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:46:14,506 - INFO - Found listing: 1287009637 - FIRSAT ARABASI.. 1.6 MULTİJET DİZEL OTOMATİK EGEA HB
+2025-12-09 23:46:14,506 - INFO - Found listing: 1286572754 - HASAN BEDİR 2.EL PLAZA'DAN FİAT EGEA URBAN PLUS HATASIZ/BOYASIZ
+2025-12-09 23:46:14,507 - INFO - Found listing: 1287105114 - "2020 FIAT EGEA 1.6 M.JET URBAN PLUS 120 HP"89.000KM-%20KDV
+2025-12-09 23:46:14,507 - INFO - Found listing: 1281119343 - 105 BİN KM'DE FİAT EGEA 1.6 URBAN PLUS OTOMATİK DİJİTAL KLİMA
+2025-12-09 23:46:14,507 - INFO - Found listing: 1286516289 - (MERCEK OTO)+(93.500­KM)+(HATASIZ AYARINDA)
+2025-12-09 23:46:14,507 - INFO - Found listing: 1259321325 - TARKAN'DAN 140 BİN PEŞİNLE 39 BİNDE 2020 EGEA URBAN PLUS
+2025-12-09 23:46:14,507 - INFO - Found listing: 1282968419 - TERTEMİZ 2020 MODEL 93 BİN KM EGEA URBAN PLUS
+2025-12-09 23:46:14,507 - INFO - Found listing: 1286105756 - 2020 MODEL URBAN PLUS 83.000 Km
+2025-12-09 23:46:14,508 - INFO - Found listing: 1283035368 - TOYOTA PLAZA AKSOY'DAN 2020 FİAT EGEA 1.6 M.JET URBAN+ OTOMATİK
+2025-12-09 23:46:14,508 - INFO - Found listing: 1285466019 - BEYHAN AUTO'dan Hatasız,değişensiz!
+2025-12-09 23:46:14,508 - INFO - Found listing: 1282237307 - YET CAR 2020 FİAT EGEA 1.6 Multijet Urban PLUS 94.000 KM
+2025-12-09 23:46:14,508 - INFO - Found listing: 1282440403 - *1.29 KREDİ*2020 EGEA HB URBAN PLUS GERİ GÖRÜŞ/LED FAR/CAR PLAY
+2025-12-09 23:46:14,508 - INFO - Found listing: 1282411077 - CVN'DEN 1,19 KREDİ ORANI-290BİN PEŞİN 36 AY TAKSİT SENET-KK TKST
+2025-12-09 23:46:14,509 - INFO - Found listing: 1282448444 - OTOFENİX 2020 FIAT EGEA 1.6 MULTIJET URBAN PLUS 108.212 KM
+2025-12-09 23:46:14,509 - INFO - Found listing: 1284788604 - SAHİBİNDEN TERTEMİZ KAPALI GARAJ ARACI
+2025-12-09 23:46:14,509 - INFO - Found listing: 1284615660 - ÖĞRETMENDEN DÜŞÜK KM EGEA
+2025-12-09 23:46:14,509 - INFO - Found listing: 1278305377 - "MİRAY" 2020 1.6 DİZEL OTOMATİK 73.000 KM KREDİ & K.KARTI TAKSİT
+2025-12-09 23:46:14,509 - INFO - Found listing: 1283362243 - BOYASIZ DEĞİŞENSİZ EGEA 1.6MJET 120HP DCT MİRROR 108.000km 2020
+2025-12-09 23:46:14,509 - INFO - Found listing: 1282748014 - MERTOĞLU AUTO'DAN 2020 MODEL FİAT EGEA 1.6 MULTİJET EMSALSİZ.
+2025-12-09 23:46:14,509 - INFO - Found listing: 1279837961 - SAHİBİNDEN TEMİZ BAKIMLI ARAÇ
+2025-12-09 23:46:14,510 - INFO - Found listing: 1282200881 - "Berlin Motors"2020/EGEA/G.­GRS/TESLA/DCT/12&36 SENET K.K
+2025-12-09 23:46:14,510 - INFO - Found listing: 1275994633 - BÜYÜKSOYLU FİLO/2020 MODEL FİAT EGEA 1.6 M.JET URBAN PLUS 120 HP
+2025-12-09 23:46:14,510 - INFO - Found listing: 1282788831 - BAKİ 2020 EGEA 1.6 MJET URBAN PLUS
+2025-12-09 23:46:14,510 - INFO - Total listings found: 37
+2025-12-09 23:46:14,510 - INFO - Processing 37 listings for Fiat Egea...
+2025-12-09 23:46:14,510 - INFO - 
+--- Processing listing 1/37 ---
+2025-12-09 23:46:14,510 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-fiat-egea-1.6-mltj-120hp-urban-plus-sadece-56binde-1287176693/detay
+2025-12-09 23:46:28,023 - INFO - Damage info - Replaced: 1, Painted: 1, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:46:28,023 - INFO - ✓ ACCEPTED: 2020 MODEL FİAT EGEA 1.6 MLTJ 120HP URBAN PLUS SADECE 56BİNDE
+2025-12-09 23:46:28,023 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:46:28,023 - INFO -   Replaced parts: 1/1
+2025-12-09 23:46:28,023 - INFO -   Painted parts: 1/2
+2025-12-09 23:46:28,023 - INFO -   Price: 1.013.850 TL
+2025-12-09 23:46:28,023 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-fiat-egea-1.6-mltj-120hp-urban-plus-sadece-56binde-1287176693/detay
+2025-12-09 23:46:30,024 - INFO - 
+--- Processing listing 2/37 ---
+2025-12-09 23:46:30,024 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-68-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287013973/detay
+2025-12-09 23:46:43,573 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 2, Hood: ✓ Temiz
+2025-12-09 23:46:43,574 - INFO - ✓ ACCEPTED: 68 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:46:43,574 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:46:43,574 - INFO -   Replaced parts: 0/1
+2025-12-09 23:46:43,574 - INFO -   Painted parts: 0/2
+2025-12-09 23:46:43,574 - INFO -   Price: 1.047.500 TL
+2025-12-09 23:46:43,574 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-68-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287013973/detay
+2025-12-09 23:46:45,574 - INFO - 
+--- Processing listing 3/37 ---
+2025-12-09 23:46:45,574 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-59-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287008164/detay
+2025-12-09 23:46:59,057 - INFO - Damage info - Replaced: 1, Painted: 1, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:46:59,057 - INFO - ✓ ACCEPTED: 59 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:46:59,057 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:46:59,057 - INFO -   Replaced parts: 1/1
+2025-12-09 23:46:59,057 - INFO -   Painted parts: 1/2
+2025-12-09 23:46:59,057 - INFO -   Price: 999.750 TL
+2025-12-09 23:46:59,057 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-59-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287008164/detay
+2025-12-09 23:47:01,057 - INFO - 
+--- Processing listing 4/37 ---
+2025-12-09 23:47:01,058 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-fatih-aksaray-mahallesi-istanbul-1287967983/detay
+2025-12-09 23:47:14,635 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 1, Hood: ✓ Temiz
+2025-12-09 23:47:14,635 - INFO - ✓ ACCEPTED: Fatih Aksaray mahallesi İstanbul
+2025-12-09 23:47:14,635 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:47:14,635 - INFO -   Replaced parts: 0/1
+2025-12-09 23:47:14,635 - INFO -   Painted parts: 0/2
+2025-12-09 23:47:14,635 - INFO -   Price: 1.040.000 TL
+2025-12-09 23:47:14,635 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-fatih-aksaray-mahallesi-istanbul-1287967983/detay
+2025-12-09 23:47:16,635 - INFO - 
+--- Processing listing 5/37 ---
+2025-12-09 23:47:16,636 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-cmr-premium-2020-fiat-egea-1.6-multijet-urban-plus-dct-1272838187/detay
+2025-12-09 23:47:30,073 - INFO - Damage info - Replaced: 2, Painted: 1, Local Painted: 0, Hood: ✗ değişen
+2025-12-09 23:47:30,073 - INFO - ✗ REJECTED: -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:47:30,073 - INFO -   KAPUT HASARLI: değişen
+2025-12-09 23:47:30,073 - INFO -   Replaced parts: 2/1
+2025-12-09 23:47:30,073 - INFO -   Painted parts: 1/2
+2025-12-09 23:47:32,074 - INFO - 
+--- Processing listing 6/37 ---
+2025-12-09 23:47:32,074 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-fiat-egea-1.6-urban-plus-60-binde-otomatik-bakimli-1286989311/detay
+2025-12-09 23:47:45,519 - INFO - Damage info - Replaced: 3, Painted: 0, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:47:45,519 - INFO - ✗ REJECTED: 2020-MODEL-FİAT -EGEA-1.6-URBAN-­PLUS-60-BİNDE-O­TOMATİK-BAKIMLI
+2025-12-09 23:47:45,519 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:47:45,519 - INFO -   Replaced parts: 3/1 (exceeded)
+2025-12-09 23:47:45,519 - INFO -   Painted parts: 0/2
+2025-12-09 23:47:47,520 - INFO - 
+--- Processing listing 7/37 ---
+2025-12-09 23:47:47,520 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-cmr-premium-2020-fiat-egea-1.6-multijet-urban-plus-dct-1272843813/detay
+2025-12-09 23:48:00,950 - INFO - Damage info - Replaced: 2, Painted: 3, Local Painted: 1, Hood: ✗ lokal boyalı
+2025-12-09 23:48:00,950 - INFO - ✗ REJECTED: -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:48:00,950 - INFO -   KAPUT HASARLI: lokal boyalı
+2025-12-09 23:48:00,950 - INFO -   Replaced parts: 2/1
+2025-12-09 23:48:00,950 - INFO -   Painted parts: 3/2
+2025-12-09 23:48:02,950 - INFO - 
+--- Processing listing 8/37 ---
+2025-12-09 23:48:02,951 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-acil-75-bin-km-de-sahibinden-1287321023/detay
+2025-12-09 23:48:16,534 - INFO - Damage info - Replaced: 2, Painted: 1, Local Painted: 3, Hood: ✗ değişen
+2025-12-09 23:48:16,534 - INFO - ✗ REJECTED: ACİL 75 BİN KM DE SAHİBİNDEN
+2025-12-09 23:48:16,534 - INFO -   KAPUT HASARLI: değişen
+2025-12-09 23:48:16,534 - INFO -   Replaced parts: 2/1
+2025-12-09 23:48:16,534 - INFO -   Painted parts: 1/2
+2025-12-09 23:48:18,534 - INFO - 
+--- Processing listing 9/37 ---
+2025-12-09 23:48:18,534 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-degisensiz-tramersiz-3.5-parca-boyali-1287181330/detay
+2025-12-09 23:48:32,182 - INFO - Damage info - Replaced: 0, Painted: 3, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:48:32,182 - INFO - ✗ REJECTED: DEĞİŞENSİZ TRAMERSİZ 3.5 PARÇA BOYALI
+2025-12-09 23:48:32,182 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:48:32,182 - INFO -   Replaced parts: 0/1
+2025-12-09 23:48:32,182 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:48:34,182 - INFO - 
+--- Processing listing 10/37 ---
+2025-12-09 23:48:34,182 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287031171/detay
+2025-12-09 23:48:47,825 - INFO - Damage info - Replaced: 1, Painted: 0, Local Painted: 1, Hood: ✓ Temiz
+2025-12-09 23:48:47,825 - INFO - ✓ ACCEPTED: GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:48:47,825 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:48:47,825 - INFO -   Replaced parts: 1/1
+2025-12-09 23:48:47,825 - INFO -   Painted parts: 0/2
+2025-12-09 23:48:47,825 - INFO -   Price: 1.049.900 TL
+2025-12-09 23:48:47,825 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287031171/detay
+2025-12-09 23:48:49,825 - INFO - 
+--- Processing listing 11/37 ---
+2025-12-09 23:48:49,825 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-63binde-1.6-dizel-otomatik-bakimli-temiz-aile-arabasi-1286954452/detay
+2025-12-09 23:49:03,376 - INFO - Damage info - Replaced: 1, Painted: 3, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:49:03,376 - INFO - ✗ REJECTED: 2020 MODEL 63BİNDE 1.6 DİZEL OTOMATİK BAKIMLI TEMİZ AİLE ARABASI
+2025-12-09 23:49:03,376 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:49:03,376 - INFO -   Replaced parts: 1/1
+2025-12-09 23:49:03,376 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:49:05,377 - INFO - 
+--- Processing listing 12/37 ---
+2025-12-09 23:49:05,377 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287024553/detay
+2025-12-09 23:49:18,977 - INFO - Damage info - Replaced: 0, Painted: 2, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:49:18,978 - INFO - ✓ ACCEPTED: GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:49:18,978 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:49:18,978 - INFO -   Replaced parts: 0/1
+2025-12-09 23:49:18,978 - INFO -   Painted parts: 2/2
+2025-12-09 23:49:18,978 - INFO -   Price: 1.049.900 TL
+2025-12-09 23:49:18,978 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287024553/detay
+2025-12-09 23:49:20,978 - INFO - 
+--- Processing listing 13/37 ---
+2025-12-09 23:49:20,978 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-1.6mjet-120-hp-ega-sw-urban-plus-emsalsiz-temizlikte-1286957455/detay
+2025-12-09 23:49:34,669 - INFO - Damage info - Replaced: 2, Painted: 1, Local Painted: 2, Hood: ✓ Temiz
+2025-12-09 23:49:34,669 - INFO - ✗ REJECTED: 2020 MODEL 1.6MJET 120 HP EGA SW URBAN PLUS EMSALSİZ TEMİZLİKTE
+2025-12-09 23:49:34,669 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:49:34,669 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:49:34,669 - INFO -   Painted parts: 1/2
+2025-12-09 23:49:36,670 - INFO - 
+--- Processing listing 14/37 ---
+2025-12-09 23:49:36,670 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-my-vizyondan-2020-egea-1.6-multijet-urban-plus-dct-1286641021/detay
+2025-12-09 23:49:50,166 - INFO - Damage info - Replaced: 0, Painted: 2, Local Painted: 1, Hood: ✓ Temiz
+2025-12-09 23:49:50,167 - INFO - ✓ ACCEPTED: MY VİZYONDAN 2020 EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:49:50,167 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:49:50,167 - INFO -   Replaced parts: 0/1
+2025-12-09 23:49:50,167 - INFO -   Painted parts: 2/2
+2025-12-09 23:49:50,167 - INFO -   Price: 1.030.000 TL
+2025-12-09 23:49:50,167 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-my-vizyondan-2020-egea-1.6-multijet-urban-plus-dct-1286641021/detay
+2025-12-09 23:49:52,167 - INFO - 
+--- Processing listing 15/37 ---
+2025-12-09 23:49:52,168 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-firsat-arabasi-1.6-multijet-dizel-otomatik-egea-hb-1287009637/detay
+2025-12-09 23:50:05,749 - INFO - Damage info - Replaced: 0, Painted: 5, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:50:05,750 - INFO - ✗ REJECTED: FIRSAT ARABASI.. 1.6 MULTİJET DİZEL OTOMATİK EGEA HB
+2025-12-09 23:50:05,750 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:50:05,750 - INFO -   Replaced parts: 0/1
+2025-12-09 23:50:05,750 - INFO -   Painted parts: 5/2 (exceeded)
+2025-12-09 23:50:07,750 - INFO - 
+--- Processing listing 16/37 ---
+2025-12-09 23:50:07,750 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-hasan-bedir-2.el-plaza-dan-fiat-egea-urban-plus-hatasiz-boyasiz-1286572754/detay
+2025-12-09 23:50:21,319 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:50:21,319 - INFO - ✓ ACCEPTED: HASAN BEDİR 2.EL PLAZA'DAN FİAT EGEA URBAN PLUS HATASIZ/BOYASIZ
+2025-12-09 23:50:21,319 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:50:21,319 - INFO -   Replaced parts: 0/1
+2025-12-09 23:50:21,319 - INFO -   Painted parts: 0/2
+2025-12-09 23:50:21,319 - INFO -   Price: 1.028.850 TL
+2025-12-09 23:50:21,319 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-hasan-bedir-2.el-plaza-dan-fiat-egea-urban-plus-hatasiz-boyasiz-1286572754/detay
+2025-12-09 23:50:23,320 - INFO - 
+--- Processing listing 17/37 ---
+2025-12-09 23:50:23,320 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-fiat-egea-1.6-m.jet-urban-plus-120-hp-89.000km-20kdv-1287105114/detay
+2025-12-09 23:50:36,894 - INFO - Damage info - Replaced: 2, Painted: 3, Local Painted: 1, Hood: ✓ Temiz
+2025-12-09 23:50:36,894 - INFO - ✗ REJECTED: "2020 FIAT EGEA 1.6 M.JET URBAN PLUS 120 HP"89.000KM-%20KDV
+2025-12-09 23:50:36,894 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:50:36,894 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:50:36,894 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:50:38,895 - INFO - 
+--- Processing listing 18/37 ---
+2025-12-09 23:50:38,895 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-105-bin-km-de-fiat-egea-1.6-urban-plus-otomatik-dijital-klima-1281119343/detay
+2025-12-09 23:51:02,662 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:51:02,662 - INFO - Skipping listing 1281119343 - No damage info available
+2025-12-09 23:51:04,662 - INFO - 
+--- Processing listing 19/37 ---
+2025-12-09 23:51:04,662 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-mercek-oto-plus-93.500km-plus-hatasiz-ayarinda-1286516289/detay
+2025-12-09 23:51:28,105 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:51:28,105 - INFO - Skipping listing 1286516289 - No damage info available
+2025-12-09 23:51:30,106 - INFO - 
+--- Processing listing 20/37 ---
+2025-12-09 23:51:30,106 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-tarkan-dan-140-bin-pesinle-39-binde-2020-egea-urban-plus-1259321325/detay
+2025-12-09 23:51:53,541 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:51:53,541 - INFO - Skipping listing 1259321325 - No damage info available
+2025-12-09 23:51:55,541 - INFO - 
+--- Processing listing 21/37 ---
+2025-12-09 23:51:55,542 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-tertemiz-2020-model-93-bin-km-egea-urban-plus-1282968419/detay
+2025-12-09 23:52:18,994 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:52:18,995 - INFO - Skipping listing 1282968419 - No damage info available
+2025-12-09 23:52:20,995 - INFO - 
+--- Processing listing 22/37 ---
+2025-12-09 23:52:20,995 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-urban-plus-83.000-km-1286105756/detay
+2025-12-09 23:52:44,421 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:52:44,421 - INFO - Skipping listing 1286105756 - No damage info available
+2025-12-09 23:52:46,421 - INFO - 
+--- Processing listing 23/37 ---
+2025-12-09 23:52:46,421 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-toyota-plaza-aksoy-dan-2020-fiat-egea-1.6-m.jet-urban-plus-otomatik-1283035368/detay
+2025-12-09 23:53:09,897 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:53:09,897 - INFO - Skipping listing 1283035368 - No damage info available
+2025-12-09 23:53:11,897 - INFO - 
+--- Processing listing 24/37 ---
+2025-12-09 23:53:11,897 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-beyhan-auto-dan-hatasiz,degisensiz-1285466019/detay
+2025-12-09 23:53:35,325 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:53:35,325 - INFO - Skipping listing 1285466019 - No damage info available
+2025-12-09 23:53:37,326 - INFO - 
+--- Processing listing 25/37 ---
+2025-12-09 23:53:37,326 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-yet-car-2020-fiat-egea-1.6-multijet-urban-plus-94.000-km-1282237307/detay
+2025-12-09 23:54:00,744 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:54:00,744 - INFO - Skipping listing 1282237307 - No damage info available
+2025-12-09 23:54:02,745 - INFO - 
+--- Processing listing 26/37 ---
+2025-12-09 23:54:02,745 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-1.29-kredi-2020-egea-hb-urban-plus-geri-gorus-led-far-car-play-1282440403/detay
+2025-12-09 23:54:26,173 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:54:26,173 - INFO - Skipping listing 1282440403 - No damage info available
+2025-12-09 23:54:28,174 - INFO - 
+--- Processing listing 27/37 ---
+2025-12-09 23:54:28,174 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-cvn-den-1,19-kredi-orani-290bin-pesin-36-ay-taksit-senet-kk-tkst-1282411077/detay
+2025-12-09 23:54:51,705 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:54:51,705 - INFO - Skipping listing 1282411077 - No damage info available
+2025-12-09 23:54:53,706 - INFO - 
+--- Processing listing 28/37 ---
+2025-12-09 23:54:53,706 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-otofenix-2020-fiat-egea-1.6-multijet-urban-plus-108.212-km-1282448444/detay
+2025-12-09 23:55:17,169 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:55:17,169 - INFO - Skipping listing 1282448444 - No damage info available
+2025-12-09 23:55:19,170 - INFO - 
+--- Processing listing 29/37 ---
+2025-12-09 23:55:19,170 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-tertemiz-kapali-garaj-araci-1284788604/detay
+2025-12-09 23:55:42,603 - WARNING - Could not find damage area: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x1034103
+	0x1034144
+	0xe3e71d
+	0xe8a03d
+	0xe8a41b
+	0xed17f2
+	0xeac954
+	0xecee17
+	0xeac706
+	0xe7da30
+	0xe7ed54
+	0x12a57b4
+	0x12a098a
+	0x105c392
+	0x104c4c8
+	0x105324d
+	0x103c478
+	0x103c63c
+	0x10267ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:55:42,603 - INFO - Skipping listing 1284788604 - No damage info available
+2025-12-09 23:55:44,603 - INFO - 
+--- Processing listing 30/37 ---
+2025-12-09 23:55:44,603 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-ogretmenden-dusuk-km-egea-1284615660/detay
+2025-12-09 23:55:58,264 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:55:58,264 - INFO - ✓ ACCEPTED: ÖĞRETMENDEN DÜŞÜK KM EGEA
+2025-12-09 23:55:58,264 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:55:58,264 - INFO -   Replaced parts: 0/1
+2025-12-09 23:55:58,264 - INFO -   Painted parts: 0/2
+2025-12-09 23:55:58,264 - INFO -   Price: 1.050.000 TL
+2025-12-09 23:55:58,264 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-ogretmenden-dusuk-km-egea-1284615660/detay
+2025-12-09 23:56:00,265 - INFO - 
+--- Processing listing 31/37 ---
+2025-12-09 23:56:00,265 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-miray-2020-1.6-dizel-otomatik-73.000-km-kredi-k.karti-taksit-1278305377/detay
+2025-12-09 23:56:13,880 - INFO - Damage info - Replaced: 1, Painted: 1, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:56:13,880 - INFO - ✓ ACCEPTED: "MİRAY" 2020 1.6 DİZEL OTOMATİK 73.000 KM KREDİ & K.KARTI TAKSİT
+2025-12-09 23:56:13,880 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:56:13,880 - INFO -   Replaced parts: 1/1
+2025-12-09 23:56:13,880 - INFO -   Painted parts: 1/2
+2025-12-09 23:56:13,880 - INFO -   Price: 1.029.000 TL
+2025-12-09 23:56:13,880 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-miray-2020-1.6-dizel-otomatik-73.000-km-kredi-k.karti-taksit-1278305377/detay
+2025-12-09 23:56:15,881 - INFO - 
+--- Processing listing 32/37 ---
+2025-12-09 23:56:15,881 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-boyasiz-degisensiz-egea-1.6mjet-120hp-dct-mirror-108.000km-2020-1283362243/detay
+2025-12-09 23:56:29,473 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:56:29,473 - INFO - ✓ ACCEPTED: BOYASIZ DEĞİŞENSİZ EGEA 1.6MJET 120HP DCT MİRROR 108.000km 2020
+2025-12-09 23:56:29,473 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:56:29,473 - INFO -   Replaced parts: 0/1
+2025-12-09 23:56:29,473 - INFO -   Painted parts: 0/2
+2025-12-09 23:56:29,473 - INFO -   Price: 1.039.000 TL
+2025-12-09 23:56:29,473 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-boyasiz-degisensiz-egea-1.6mjet-120hp-dct-mirror-108.000km-2020-1283362243/detay
+2025-12-09 23:56:31,473 - INFO - 
+--- Processing listing 33/37 ---
+2025-12-09 23:56:31,474 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-mertoglu-auto-dan-2020-model-fiat-egea-1.6-multijet-emsalsiz-1282748014/detay
+2025-12-09 23:56:45,026 - INFO - Damage info - Replaced: 0, Painted: 3, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:56:45,026 - INFO - ✗ REJECTED: MERTOĞLU AUTO'DAN 2020 MODEL FİAT EGEA 1.6 MULTİJET EMSALSİZ.
+2025-12-09 23:56:45,026 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:56:45,026 - INFO -   Replaced parts: 0/1
+2025-12-09 23:56:45,026 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:56:47,027 - INFO - 
+--- Processing listing 34/37 ---
+2025-12-09 23:56:47,027 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-temiz-bakimli-arac-1279837961/detay
+2025-12-09 23:57:00,603 - INFO - Damage info - Replaced: 0, Painted: 2, Local Painted: 1, Hood: ✓ Temiz
+2025-12-09 23:57:00,604 - INFO - ✓ ACCEPTED: SAHİBİNDEN TEMİZ BAKIMLI ARAÇ
+2025-12-09 23:57:00,604 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:57:00,604 - INFO -   Replaced parts: 0/1
+2025-12-09 23:57:00,604 - INFO -   Painted parts: 2/2
+2025-12-09 23:57:00,604 - INFO -   Price: 1.045.000 TL
+2025-12-09 23:57:00,604 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-temiz-bakimli-arac-1279837961/detay
+2025-12-09 23:57:02,604 - INFO - 
+--- Processing listing 35/37 ---
+2025-12-09 23:57:02,605 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-berlin-motors-2020-egea-g.grs-tesla-dct-12-36-senet-k.k-1282200881/detay
+2025-12-09 23:57:16,193 - INFO - Damage info - Replaced: 0, Painted: 1, Local Painted: 0, Hood: ✓ Temiz
+2025-12-09 23:57:16,193 - INFO - ✓ ACCEPTED: "Berlin Motors"2020/EGEA/G.­GRS/TESLA/DCT/12&36 SENET K.K
+2025-12-09 23:57:16,193 - INFO -   Hood: ✓ Temiz
+2025-12-09 23:57:16,193 - INFO -   Replaced parts: 0/1
+2025-12-09 23:57:16,193 - INFO -   Painted parts: 1/2
+2025-12-09 23:57:16,193 - INFO -   Price: 1.010.000 TL
+2025-12-09 23:57:16,193 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-berlin-motors-2020-egea-g.grs-tesla-dct-12-36-senet-k.k-1282200881/detay
+2025-12-09 23:57:18,194 - INFO - 
+--- Processing listing 36/37 ---
+2025-12-09 23:57:18,194 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-buyuksoylu-filo-2020-model-fiat-egea-1.6-m.jet-urban-plus-120-hp-1275994633/detay
+2025-12-09 23:57:31,762 - INFO - Damage info - Replaced: 2, Painted: 3, Local Painted: 0, Hood: ✗ değişen
+2025-12-09 23:57:31,763 - INFO - ✗ REJECTED: BÜYÜKSOYLU FİLO/2020 MODEL FİAT EGEA 1.6 M.JET URBAN PLUS 120 HP
+2025-12-09 23:57:31,763 - INFO -   KAPUT HASARLI: değişen
+2025-12-09 23:57:31,763 - INFO -   Replaced parts: 2/1
+2025-12-09 23:57:31,763 - INFO -   Painted parts: 3/2
+2025-12-09 23:57:33,763 - INFO - 
+--- Processing listing 37/37 ---
+2025-12-09 23:57:33,763 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-baki-2020-egea-1.6-mjet-urban-plus-1282788831/detay
+2025-12-09 23:57:47,384 - INFO - Damage info - Replaced: 1, Painted: 0, Local Painted: 2, Hood: ✗ değişen
+2025-12-09 23:57:47,384 - INFO - ✗ REJECTED: BAKİ 2020 EGEA 1.6 MJET URBAN PLUS
+2025-12-09 23:57:47,384 - INFO -   KAPUT HASARLI: değişen
+2025-12-09 23:57:47,384 - INFO -   Replaced parts: 1/1
+2025-12-09 23:57:47,384 - INFO -   Painted parts: 0/2
+2025-12-09 23:57:49,386 - INFO - 
+============================================================
+2025-12-09 23:57:49,386 - INFO - SUMMARY
+2025-12-09 23:57:49,386 - INFO - ============================================================
+2025-12-09 23:57:49,386 - INFO - Total new accepted listings: 14
+2025-12-09 23:57:49,386 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:57:49,386 - INFO - ============================================================
+2025-12-09 23:57:49,386 - INFO - 
+14 new listings found! Sending email...
+2025-12-09 23:57:49,386 - INFO - ============================================================
+2025-12-09 23:57:49,386 - INFO - EMAIL CONTENT:
+2025-12-09 23:57:49,386 - INFO - ============================================================
+2025-12-09 23:57:49,386 - INFO - • 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:57:49,386 - INFO -   Marka: Kia Rio
+2025-12-09 23:57:49,386 - INFO -   Fiyat: 1.039.850 TL
+2025-12-09 23:57:49,386 - INFO -   Yıl: 2020 | KM: 31.000
+2025-12-09 23:57:49,386 - INFO -   Boya: 2 | Değişen: 1
+2025-12-09 23:57:49,386 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:57:49,386 - INFO - 
+2025-12-09 23:57:49,386 - INFO - • 2020 MODEL FİAT EGEA 1.6 MLTJ 120HP URBAN PLUS SADECE 56BİNDE
+2025-12-09 23:57:49,386 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,386 - INFO -   Fiyat: 1.013.850 TL
+2025-12-09 23:57:49,386 - INFO -   Yıl: 2020 | KM: 56.000
+2025-12-09 23:57:49,386 - INFO -   Boya: 1 | Değişen: 1
+2025-12-09 23:57:49,386 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-fiat-egea-1.6-mltj-120hp-urban-plus-sadece-56binde-1287176693/detay
+2025-12-09 23:57:49,386 - INFO - 
+2025-12-09 23:57:49,386 - INFO - • 68 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:57:49,386 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,386 - INFO -   Fiyat: 1.047.500 TL
+2025-12-09 23:57:49,386 - INFO -   Yıl: 2020 | KM: 68.000
+2025-12-09 23:57:49,386 - INFO -   Boya: 0 | Değişen: 0
+2025-12-09 23:57:49,386 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-68-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287013973/detay
+2025-12-09 23:57:49,386 - INFO - 
+2025-12-09 23:57:49,386 - INFO - • 59 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:57:49,386 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,386 - INFO -   Fiyat: 999.750 TL
+2025-12-09 23:57:49,386 - INFO -   Yıl: 2020 | KM: 60.000
+2025-12-09 23:57:49,386 - INFO -   Boya: 1 | Değişen: 1
+2025-12-09 23:57:49,386 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-59-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287008164/detay
+2025-12-09 23:57:49,386 - INFO - 
+2025-12-09 23:57:49,386 - INFO - • Fatih Aksaray mahallesi İstanbul
+2025-12-09 23:57:49,386 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,386 - INFO -   Fiyat: 1.040.000 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 76.715
+2025-12-09 23:57:49,387 - INFO -   Boya: 0 | Değişen: 0
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-fatih-aksaray-mahallesi-istanbul-1287967983/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.049.900 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 57.000
+2025-12-09 23:57:49,387 - INFO -   Boya: 0 | Değişen: 1
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287031171/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.049.900 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 71.000
+2025-12-09 23:57:49,387 - INFO -   Boya: 2 | Değişen: 0
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287024553/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • MY VİZYONDAN 2020 EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.030.000 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 102.000
+2025-12-09 23:57:49,387 - INFO -   Boya: 2 | Değişen: 0
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-my-vizyondan-2020-egea-1.6-multijet-urban-plus-dct-1286641021/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • HASAN BEDİR 2.EL PLAZA'DAN FİAT EGEA URBAN PLUS HATASIZ/BOYASIZ
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.028.850 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 105.000
+2025-12-09 23:57:49,387 - INFO -   Boya: 0 | Değişen: 0
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-hasan-bedir-2.el-plaza-dan-fiat-egea-urban-plus-hatasiz-boyasiz-1286572754/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • ÖĞRETMENDEN DÜŞÜK KM EGEA
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.050.000 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 110.000
+2025-12-09 23:57:49,387 - INFO -   Boya: 0 | Değişen: 0
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-ogretmenden-dusuk-km-egea-1284615660/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • "MİRAY" 2020 1.6 DİZEL OTOMATİK 73.000 KM KREDİ & K.KARTI TAKSİT
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.029.000 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 73.500
+2025-12-09 23:57:49,387 - INFO -   Boya: 1 | Değişen: 1
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-miray-2020-1.6-dizel-otomatik-73.000-km-kredi-k.karti-taksit-1278305377/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • BOYASIZ DEĞİŞENSİZ EGEA 1.6MJET 120HP DCT MİRROR 108.000km 2020
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.039.000 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 108.000
+2025-12-09 23:57:49,387 - INFO -   Boya: 0 | Değişen: 0
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-boyasiz-degisensiz-egea-1.6mjet-120hp-dct-mirror-108.000km-2020-1283362243/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,387 - INFO - • SAHİBİNDEN TEMİZ BAKIMLI ARAÇ
+2025-12-09 23:57:49,387 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,387 - INFO -   Fiyat: 1.045.000 TL
+2025-12-09 23:57:49,387 - INFO -   Yıl: 2020 | KM: 81.000
+2025-12-09 23:57:49,387 - INFO -   Boya: 2 | Değişen: 0
+2025-12-09 23:57:49,387 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-temiz-bakimli-arac-1279837961/detay
+2025-12-09 23:57:49,387 - INFO - 
+2025-12-09 23:57:49,388 - INFO - • "Berlin Motors"2020/EGEA/G.­GRS/TESLA/DCT/12&36 SENET K.K
+2025-12-09 23:57:49,388 - INFO -   Marka: Fiat Egea
+2025-12-09 23:57:49,388 - INFO -   Fiyat: 1.010.000 TL
+2025-12-09 23:57:49,388 - INFO -   Yıl: 2020 | KM: 105.000
+2025-12-09 23:57:49,388 - INFO -   Boya: 1 | Değişen: 0
+2025-12-09 23:57:49,388 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-berlin-motors-2020-egea-g.grs-tesla-dct-12-36-senet-k.k-1282200881/detay
+2025-12-09 23:57:49,388 - INFO - 
+2025-12-09 23:57:49,388 - INFO - ============================================================
+2025-12-09 23:57:50,802 - INFO - Email sent successfully!
+2025-12-09 23:57:50,802 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:57:50,802 - INFO - Press Ctrl+C to stop
