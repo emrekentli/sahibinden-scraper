@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import time
+import random
 import json
 import logging
 import schedule
@@ -59,13 +60,65 @@ class SahibindenScraper:
     def init_driver(self):
         logging.info("Initializing undetected Chrome driver...")
         options = uc.ChromeOptions()
-        options.add_argument('--start-maximized')
+
+        # Temel ayarlar
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-blink-features=AutomationControlled')
+        options.add_argument('--disable-web-security')
+        options.add_argument('--disable-features=IsolateOrigins,site-per-process')
 
-        self.driver = uc.Chrome(options=options, version_main=142, headless=False, use_subprocess=False)
+        # Pencere boyutu (headless için önemli)
+        options.add_argument('--window-size=1920,1080')
+        options.add_argument('--start-maximized')
 
-        logging.info("Driver initialized successfully")
+        # Bot tespitini zorlaştıran ek ayarlar
+        options.add_argument('--disable-blink-features=AutomationControlled')
+        options.add_argument('--exclude-switches=enable-automation')
+        options.add_argument('--disable-extensions')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--disable-infobars')
+        options.add_argument('--disable-notifications')
+
+        # User agent (gerçek bir tarayıcı gibi görünmek için)
+        options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36')
+
+        # Dil ayarları
+        options.add_argument('--lang=tr-TR')
+        options.add_experimental_option('prefs', {
+            'intl.accept_languages': 'tr,tr-TR,en-US,en'
+        })
+
+        # enable-automation bayrağını kaldır
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+
+        try:
+            # Version'ı otomatik tespit ettir, headless=False ama Xvfb kullanacağız
+            self.driver = uc.Chrome(options=options, headless=False, use_subprocess=True)
+            logging.info("Driver initialized successfully")
+
+            # JavaScript injection - webdriver flaglerini gizle
+            self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {
+                "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+            })
+            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+
+        except Exception as e:
+            logging.error(f"Error initializing driver: {e}")
+            # Fallback olarak version_main belirterek dene
+            logging.info("Retrying with specific Chrome version...")
+            self.driver = uc.Chrome(options=options, version_main=131, headless=False, use_subprocess=True)
+            logging.info("Driver initialized successfully with version 131")
+
+            # JavaScript injection
+            try:
+                self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {
+                    "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+                })
+                self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            except:
+                pass
 
     def handle_cloudflare_challenge(self):
         try:
@@ -90,17 +143,38 @@ class SahibindenScraper:
         logging.info(f"Navigating to: {url}")
         self.driver.get(url)
 
-        time.sleep(5)
+        # İlk bekleme - sayfanın yüklenmesi için
+        time.sleep(7)
 
+        # Login sayfasına yönlendirildik mi kontrol et
+        current_url = self.driver.current_url
+        if 'login' in current_url.lower() or 'secure.sahibinden.com' in current_url:
+            logging.warning("Redirected to login page - bot detection active")
+            logging.info(f"Current URL: {current_url}")
+            logging.info("Trying to reload the page...")
+
+            # Biraz bekle ve tekrar dene
+            time.sleep(10)
+            self.driver.get(url)
+            time.sleep(8)
+
+            # Hala login sayfasındaysak, vazgeç
+            if 'login' in self.driver.current_url.lower():
+                logging.error("Still on login page after retry - skipping this brand")
+                self.driver.save_screenshot("login_redirect.png")
+                return []
+
+        # Cloudflare challenge kontrolü
         if self.handle_cloudflare_challenge():
             logging.info("Cloudflare challenge handled, continuing...")
-            time.sleep(3)
+            time.sleep(5)
 
         try:
-            WebDriverWait(self.driver, 15).until(
+            WebDriverWait(self.driver, 20).until(
                 EC.presence_of_element_located((By.CLASS_NAME, "searchResultsItem"))
             )
             logging.info("Search results page loaded")
+            time.sleep(2)  # Sayfanın tamamen render olması için
         except Exception as e:
             logging.error(f"Error loading search results: {e}")
             logging.info("Current URL: " + self.driver.current_url)
@@ -175,11 +249,23 @@ class SahibindenScraper:
         logging.info(f"Checking damage info for: {listing_url}")
         self.driver.get(listing_url)
 
-        time.sleep(3)
+        # Daha uzun bekleme - insan gibi davranmak için
+        time.sleep(5)
+
+        # Login kontrolü
+        if 'login' in self.driver.current_url.lower():
+            logging.warning("Redirected to login on detail page - retrying...")
+            time.sleep(8)
+            self.driver.get(listing_url)
+            time.sleep(5)
+
+            if 'login' in self.driver.current_url.lower():
+                logging.error("Still on login page - cannot get damage info")
+                return None
 
         if self.handle_cloudflare_challenge():
             logging.info("Cloudflare challenge handled on detail page, continuing...")
-            time.sleep(3)
+            time.sleep(4)
 
         try:
             WebDriverWait(self.driver, 10).until(
@@ -338,7 +424,10 @@ class SahibindenScraper:
                 for idx, listing in enumerate(listings, 1):
                     logging.info(f"\n--- Processing listing {idx}/{len(listings)} ---")
                     self.check_listing(listing)
-                    time.sleep(2)
+                    # Random delay between listings (3-7 seconds)
+                    delay = random.uniform(3, 7)
+                    logging.info(f"Waiting {delay:.1f}s before next listing...")
+                    time.sleep(delay)
 
             self.save_seen_ads()
             self.save_results()
