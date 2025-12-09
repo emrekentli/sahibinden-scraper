@@ -1,0 +1,1100 @@
+2025-12-09 23:09:37,288 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:09:37,860 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:09:41,695 - ERROR - Error during scraping: Message: session not created: cannot connect to chrome at 127.0.0.1:58576
+from session not created: This version of ChromeDriver only supports Chrome version 143
+Current browser version is 142.0.7444.176; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xff0d23
+	0xff0d64
+	0xdde6dd
+	0xe1a958
+	0xe19992
+	0xe0fbe5
+	0xe0fa16
+	0xe57826
+	0xe57047
+	0xe4b2e6
+	0xe1d321
+	0xe1e1d4
+	0x1244d64
+	0x124031b
+	0x125cbfa
+	0x100ac28
+	0x1012c2d
+	0xff9028
+	0xff91e9
+	0xfe3578
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+Traceback (most recent call last):
+  File "C:\Users\t0fifeen\Desktop\sah\sahibinden_scraper.py", line 200, in run
+    self.init_driver()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\t0fifeen\Desktop\sah\sahibinden_scraper.py", line 33, in init_driver
+    self.driver = uc.Chrome(options=options, version_main=None)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        service=service,
+        ^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        capabilities
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 233, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: cannot connect to chrome at 127.0.0.1:58576
+from session not created: This version of ChromeDriver only supports Chrome version 143
+Current browser version is 142.0.7444.176; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xff0d23
+	0xff0d64
+	0xdde6dd
+	0xe1a958
+	0xe19992
+	0xe0fbe5
+	0xe0fa16
+	0xe57826
+	0xe57047
+	0xe4b2e6
+	0xe1d321
+	0xe1e1d4
+	0x1244d64
+	0x124031b
+	0x125cbfa
+	0x100ac28
+	0x1012c2d
+	0xff9028
+	0xff91e9
+	0xfe3578
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:10:32,252 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:10:32,898 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:10:34,547 - INFO - Driver initialized successfully
+2025-12-09 23:10:34,548 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:10:50,383 - ERROR - Error loading search results: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x3c4103
+	0x3c4144
+	0x1ce71d
+	0x21a03d
+	0x21a41b
+	0x2617f2
+	0x23c954
+	0x25ee17
+	0x23c706
+	0x20da30
+	0x20ed54
+	0x6357b4
+	0x63098a
+	0x3ec392
+	0x3dc4c8
+	0x3e324d
+	0x3cc478
+	0x3cc63c
+	0x3b67ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+	0
+
+2025-12-09 23:10:50,384 - WARNING - No listings found
+2025-12-09 23:10:50,384 - INFO - Closing browser...
+2025-12-09 23:12:09,784 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:12:10,412 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:12:14,262 - ERROR - Error during scraping: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x11f4103
+	0x11f4144
+	0xffe71d
+	0x10280a7
+	0x1029d50
+	0x10243bb
+	0x1077254
+	0x1076c7f
+	0x10784bf
+	0x10782ba
+	0x106c706
+	0x103da30
+	0x103ed54
+	0x14657b4
+	0x146098a
+	0x121c392
+	0x120c4c8
+	0x121324d
+	0x11fc478
+	0x11fc63c
+	0x11e67ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+Traceback (most recent call last):
+  File "C:\Users\t0fifeen\Desktop\sah\sahibinden_scraper.py", line 244, in run
+    self.init_driver()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\t0fifeen\Desktop\sah\sahibinden_scraper.py", line 44, in init_driver
+    self.driver = uc.Chrome(options=options, version_main=142, headless=False, use_subprocess=True)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        service=service,
+        ^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        capabilities
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 233, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x11f4103
+	0x11f4144
+	0xffe71d
+	0x10280a7
+	0x1029d50
+	0x10243bb
+	0x1077254
+	0x1076c7f
+	0x10784bf
+	0x10782ba
+	0x106c706
+	0x103da30
+	0x103ed54
+	0x14657b4
+	0x146098a
+	0x121c392
+	0x120c4c8
+	0x121324d
+	0x11fc478
+	0x11fc63c
+	0x11e67ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:12:22,599 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:12:23,317 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:12:27,134 - ERROR - Error during scraping: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x664103
+	0x664144
+	0x46e71d
+	0x4980a7
+	0x499d50
+	0x4943bb
+	0x4e7254
+	0x4e6c7f
+	0x4e84bf
+	0x4e82ba
+	0x4dc706
+	0x4ada30
+	0x4aed54
+	0x8d57b4
+	0x8d098a
+	0x68c392
+	0x67c4c8
+	0x68324d
+	0x66c478
+	0x66c63c
+	0x6567ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+Traceback (most recent call last):
+  File "C:\Users\t0fifeen\Desktop\sah\sahibinden_scraper.py", line 244, in run
+    self.init_driver()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\t0fifeen\Desktop\sah\sahibinden_scraper.py", line 44, in init_driver
+    self.driver = uc.Chrome(options=options, version_main=142, headless=False, use_subprocess=True)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        service=service,
+        ^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 71, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        capabilities
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\t0fifeen\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 233, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x664103
+	0x664144
+	0x46e71d
+	0x4980a7
+	0x499d50
+	0x4943bb
+	0x4e7254
+	0x4e6c7f
+	0x4e84bf
+	0x4e82ba
+	0x4dc706
+	0x4ada30
+	0x4aed54
+	0x8d57b4
+	0x8d098a
+	0x68c392
+	0x67c4c8
+	0x68324d
+	0x66c478
+	0x66c63c
+	0x6567ca
+	0x758a5d49
+	0x7742d6db
+	0x7742d661
+
+2025-12-09 23:13:06,836 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:13:07,418 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:13:09,311 - INFO - Driver initialized successfully
+2025-12-09 23:13:09,312 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:13:14,973 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:13:14,973 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:13:19,973 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:13:20,014 - INFO - Waiting for challenge to complete...
+2025-12-09 23:13:28,015 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:13:31,024 - INFO - Search results page loaded
+2025-12-09 23:13:31,070 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:13:31,071 - INFO - Total listings found: 1
+2025-12-09 23:13:31,071 - INFO - Processing 1 listings...
+2025-12-09 23:13:31,071 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:13:31,071 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:13:44,677 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:13:44,677 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:13:44,677 - INFO -   Replaced parts: 1/1
+2025-12-09 23:13:44,677 - INFO -   Painted parts: 2/2
+2025-12-09 23:13:44,677 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:13:44,677 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:13:46,678 - INFO - 
+============================================================
+2025-12-09 23:13:46,679 - INFO - SUMMARY
+2025-12-09 23:13:46,679 - INFO - ============================================================
+2025-12-09 23:13:46,679 - INFO - Total accepted listings: 1
+2025-12-09 23:13:46,679 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:13:46,679 - INFO - ============================================================
+2025-12-09 23:13:46,679 - INFO - Closing browser...
+2025-12-09 23:17:33,541 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:17:33,541 - INFO - Check interval: 30 minutes
+2025-12-09 23:17:33,541 - INFO - Max replaced parts: 1
+2025-12-09 23:17:33,541 - INFO - Max painted parts: 2
+2025-12-09 23:17:33,541 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:17:34,164 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:17:36,066 - INFO - Driver initialized successfully
+2025-12-09 23:17:36,066 - INFO - 
+============================================================
+2025-12-09 23:17:36,066 - INFO - Checking brand: Kia Rio
+2025-12-09 23:17:36,066 - INFO - ============================================================
+2025-12-09 23:17:36,066 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:17:41,720 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:17:41,720 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:17:46,721 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:17:46,774 - INFO - Waiting for challenge to complete...
+2025-12-09 23:17:54,775 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:17:57,784 - INFO - Search results page loaded
+2025-12-09 23:17:57,827 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:17:57,828 - INFO - Total listings found: 1
+2025-12-09 23:17:57,828 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:17:57,828 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:17:57,828 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:18:11,479 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:18:11,479 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:18:11,479 - INFO -   Replaced parts: 1/1
+2025-12-09 23:18:11,479 - INFO -   Painted parts: 2/2
+2025-12-09 23:18:11,479 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:18:11,479 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:18:13,481 - INFO - 
+============================================================
+2025-12-09 23:18:13,481 - INFO - SUMMARY
+2025-12-09 23:18:13,481 - INFO - ============================================================
+2025-12-09 23:18:13,481 - INFO - Total new accepted listings: 1
+2025-12-09 23:18:13,481 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:18:13,481 - INFO - ============================================================
+2025-12-09 23:18:13,481 - INFO - 
+1 new listings found! Sending email...
+2025-12-09 23:18:13,481 - WARNING - Failed to send email
+2025-12-09 23:18:13,482 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:18:13,482 - INFO - Press Ctrl+C to stop
+2025-12-09 23:18:21,135 - INFO - 
+Stopping scraper...
+2025-12-09 23:18:21,135 - INFO - Closing browser...
+2025-12-09 23:19:25,997 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:19:25,997 - INFO - Check interval: 30 minutes
+2025-12-09 23:19:25,997 - INFO - Max replaced parts: 1
+2025-12-09 23:19:25,997 - INFO - Max painted parts: 2
+2025-12-09 23:19:25,997 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:19:26,566 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:19:28,521 - INFO - Driver initialized successfully
+2025-12-09 23:19:28,522 - INFO - 
+============================================================
+2025-12-09 23:19:28,522 - INFO - Checking brand: Kia Rio
+2025-12-09 23:19:28,522 - INFO - ============================================================
+2025-12-09 23:19:28,522 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:19:34,227 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:19:34,227 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:19:39,228 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:19:39,267 - INFO - Waiting for challenge to complete...
+2025-12-09 23:19:47,268 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:19:57,824 - INFO - Search results page loaded
+2025-12-09 23:19:57,871 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:19:57,871 - INFO - Total listings found: 1
+2025-12-09 23:19:57,871 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:19:57,871 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:19:57,871 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:20:11,578 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:20:11,578 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:20:11,578 - INFO -   Replaced parts: 1/1
+2025-12-09 23:20:11,578 - INFO -   Painted parts: 2/2
+2025-12-09 23:20:11,578 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:20:11,578 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:20:13,579 - INFO - 
+============================================================
+2025-12-09 23:20:13,579 - INFO - SUMMARY
+2025-12-09 23:20:13,579 - INFO - ============================================================
+2025-12-09 23:20:13,579 - INFO - Total new accepted listings: 1
+2025-12-09 23:20:13,579 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:20:13,579 - INFO - ============================================================
+2025-12-09 23:20:13,579 - INFO - 
+1 new listings found! Sending email...
+2025-12-09 23:20:13,580 - WARNING - Failed to send email
+2025-12-09 23:20:13,580 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:20:13,580 - INFO - Press Ctrl+C to stop
+2025-12-09 23:21:42,303 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:21:42,303 - INFO - Check interval: 30 minutes
+2025-12-09 23:21:42,303 - INFO - Max replaced parts: 1
+2025-12-09 23:21:42,303 - INFO - Max painted parts: 2
+2025-12-09 23:21:42,303 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:21:43,033 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:21:44,964 - INFO - Driver initialized successfully
+2025-12-09 23:21:44,964 - INFO - 
+============================================================
+2025-12-09 23:21:44,964 - INFO - Checking brand: Kia Rio
+2025-12-09 23:21:44,964 - INFO - ============================================================
+2025-12-09 23:21:44,964 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:21:48,940 - INFO - 
+Stopping scraper...
+2025-12-09 23:21:48,940 - INFO - Closing browser...
+2025-12-09 23:21:59,390 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:21:59,390 - INFO - Check interval: 30 minutes
+2025-12-09 23:21:59,390 - INFO - Max replaced parts: 1
+2025-12-09 23:21:59,390 - INFO - Max painted parts: 2
+2025-12-09 23:21:59,390 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:21:59,968 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:22:01,852 - INFO - Driver initialized successfully
+2025-12-09 23:22:01,852 - INFO - 
+============================================================
+2025-12-09 23:22:01,852 - INFO - Checking brand: Kia Rio
+2025-12-09 23:22:01,852 - INFO - ============================================================
+2025-12-09 23:22:01,852 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:22:07,524 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:22:07,524 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:22:12,525 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:22:12,565 - INFO - Waiting for challenge to complete...
+2025-12-09 23:22:20,565 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:22:23,574 - INFO - Search results page loaded
+2025-12-09 23:22:23,642 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:22:23,643 - INFO - Total listings found: 1
+2025-12-09 23:22:23,643 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:22:23,643 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:22:23,643 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:22:37,462 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:22:37,462 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:22:37,463 - INFO -   Replaced parts: 1/1
+2025-12-09 23:22:37,463 - INFO -   Painted parts: 2/2
+2025-12-09 23:22:37,463 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:22:37,463 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:22:39,464 - INFO - 
+============================================================
+2025-12-09 23:22:39,464 - INFO - SUMMARY
+2025-12-09 23:22:39,464 - INFO - ============================================================
+2025-12-09 23:22:39,465 - INFO - Total new accepted listings: 1
+2025-12-09 23:22:39,465 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:22:39,465 - INFO - ============================================================
+2025-12-09 23:22:39,465 - INFO - 
+1 new listings found! Sending email...
+2025-12-09 23:22:39,465 - WARNING - Failed to send email
+2025-12-09 23:22:39,465 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:22:39,465 - INFO - Press Ctrl+C to stop
+2025-12-09 23:22:50,367 - INFO - 
+Stopping scraper...
+2025-12-09 23:22:50,368 - INFO - Closing browser...
+2025-12-09 23:23:49,773 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:23:49,773 - INFO - Check interval: 30 minutes
+2025-12-09 23:23:49,773 - INFO - Max replaced parts: 1
+2025-12-09 23:23:49,773 - INFO - Max painted parts: 2
+2025-12-09 23:23:49,773 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:23:50,424 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:23:52,362 - INFO - Driver initialized successfully
+2025-12-09 23:23:52,362 - INFO - 
+============================================================
+2025-12-09 23:23:52,362 - INFO - Checking brand: Kia Rio
+2025-12-09 23:23:52,363 - INFO - ============================================================
+2025-12-09 23:23:52,363 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:23:58,035 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:23:58,036 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:24:03,036 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:24:03,077 - INFO - Waiting for challenge to complete...
+2025-12-09 23:24:11,078 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:24:14,089 - INFO - Search results page loaded
+2025-12-09 23:24:14,135 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:24:14,135 - INFO - Total listings found: 1
+2025-12-09 23:24:14,135 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:24:14,135 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:24:14,136 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:24:27,970 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:24:27,970 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:24:27,970 - INFO -   Replaced parts: 1/1
+2025-12-09 23:24:27,970 - INFO -   Painted parts: 2/2
+2025-12-09 23:24:27,970 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:24:27,970 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:24:29,971 - INFO - 
+============================================================
+2025-12-09 23:24:29,971 - INFO - SUMMARY
+2025-12-09 23:24:29,971 - INFO - ============================================================
+2025-12-09 23:24:29,971 - INFO - Total new accepted listings: 1
+2025-12-09 23:24:29,972 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:24:29,972 - INFO - ============================================================
+2025-12-09 23:24:29,972 - INFO - 
+1 new listings found! Sending email...
+2025-12-09 23:24:31,541 - INFO - Email sent successfully!
+2025-12-09 23:24:31,541 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:24:31,541 - INFO - Press Ctrl+C to stop
+2025-12-09 23:25:33,872 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:25:33,872 - INFO - Check interval: 30 minutes
+2025-12-09 23:25:33,872 - INFO - Max replaced parts: 1
+2025-12-09 23:25:33,872 - INFO - Max painted parts: 2
+2025-12-09 23:25:33,872 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:25:34,493 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:25:36,392 - INFO - Driver initialized successfully
+2025-12-09 23:25:36,392 - INFO - 
+============================================================
+2025-12-09 23:25:36,392 - INFO - Checking brand: Kia Rio
+2025-12-09 23:25:36,392 - INFO - ============================================================
+2025-12-09 23:25:36,392 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:25:42,096 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:25:42,097 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:25:47,097 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:25:47,141 - INFO - Waiting for challenge to complete...
+2025-12-09 23:25:55,142 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:25:58,151 - INFO - Search results page loaded
+2025-12-09 23:25:58,195 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:25:58,195 - INFO - Total listings found: 1
+2025-12-09 23:25:58,195 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:25:58,195 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:25:58,195 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:26:11,850 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:26:11,850 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:26:11,850 - INFO -   Replaced parts: 1/1
+2025-12-09 23:26:11,850 - INFO -   Painted parts: 2/2
+2025-12-09 23:26:11,850 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:26:11,850 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:26:13,851 - INFO - 
+============================================================
+2025-12-09 23:26:13,852 - INFO - SUMMARY
+2025-12-09 23:26:13,852 - INFO - ============================================================
+2025-12-09 23:26:13,852 - INFO - Total new accepted listings: 1
+2025-12-09 23:26:13,852 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:26:13,852 - INFO - ============================================================
+2025-12-09 23:26:13,852 - INFO - 
+1 new listings found! Sending email...
+2025-12-09 23:26:13,852 - INFO - ============================================================
+2025-12-09 23:26:13,852 - INFO - EMAIL CONTENT:
+2025-12-09 23:26:13,852 - INFO - ============================================================
+2025-12-09 23:26:13,852 - INFO - • 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:26:13,852 - INFO -   Marka: Kia Rio
+2025-12-09 23:26:13,852 - INFO -   Fiyat: 1.039.850 TL
+2025-12-09 23:26:13,852 - INFO -   Yıl: 2020 | KM: 31.000
+2025-12-09 23:26:13,852 - INFO -   Boya: 2 | Değişen: 1
+2025-12-09 23:26:13,852 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:26:13,852 - INFO - 
+2025-12-09 23:26:13,852 - INFO - ============================================================
+2025-12-09 23:26:14,978 - INFO - Email sent successfully!
+2025-12-09 23:26:14,978 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:26:14,978 - INFO - Press Ctrl+C to stop
+2025-12-09 23:27:08,518 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:27:08,519 - INFO - Check interval: 30 minutes
+2025-12-09 23:27:08,519 - INFO - Max replaced parts: 1
+2025-12-09 23:27:08,519 - INFO - Max painted parts: 2
+2025-12-09 23:27:08,519 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:27:09,336 - INFO - Driver initialized successfully
+2025-12-09 23:27:09,336 - INFO - 
+============================================================
+2025-12-09 23:27:09,336 - INFO - Checking brand: Kia Rio
+2025-12-09 23:27:09,336 - INFO - ============================================================
+2025-12-09 23:27:09,336 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:27:14,989 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:27:14,989 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:27:19,989 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:27:20,037 - INFO - Waiting for challenge to complete...
+2025-12-09 23:27:28,037 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:27:31,047 - INFO - Search results page loaded
+2025-12-09 23:27:31,101 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:27:31,101 - INFO - Total listings found: 1
+2025-12-09 23:27:31,101 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:27:31,102 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:27:31,102 - INFO - Skipping already seen listing: 1286652975
+2025-12-09 23:27:33,103 - INFO - 
+============================================================
+2025-12-09 23:27:33,103 - INFO - SUMMARY
+2025-12-09 23:27:33,103 - INFO - ============================================================
+2025-12-09 23:27:33,103 - INFO - Total new accepted listings: 0
+2025-12-09 23:27:33,103 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:27:33,103 - INFO - ============================================================
+2025-12-09 23:27:33,104 - INFO - No new listings matching criteria
+2025-12-09 23:27:33,104 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:27:33,104 - INFO - Press Ctrl+C to stop
+2025-12-09 23:27:44,946 - INFO - 
+Stopping scraper...
+2025-12-09 23:27:44,946 - INFO - Closing browser...
+2025-12-09 23:27:51,584 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:27:51,584 - INFO - Check interval: 30 minutes
+2025-12-09 23:27:51,585 - INFO - Max replaced parts: 1
+2025-12-09 23:27:51,585 - INFO - Max painted parts: 2
+2025-12-09 23:27:51,585 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:27:52,399 - INFO - Driver initialized successfully
+2025-12-09 23:27:52,399 - INFO - 
+============================================================
+2025-12-09 23:27:52,399 - INFO - Checking brand: Kia Rio
+2025-12-09 23:27:52,399 - INFO - ============================================================
+2025-12-09 23:27:52,399 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:27:58,058 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:27:58,058 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:28:03,059 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:28:03,100 - INFO - Waiting for challenge to complete...
+2025-12-09 23:28:11,101 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:28:14,110 - INFO - Search results page loaded
+2025-12-09 23:28:14,156 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:28:14,156 - INFO - Total listings found: 1
+2025-12-09 23:28:14,157 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:28:14,157 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:28:14,157 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:28:27,750 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:28:27,750 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:28:27,751 - INFO -   Replaced parts: 1/1
+2025-12-09 23:28:27,751 - INFO -   Painted parts: 2/2
+2025-12-09 23:28:27,751 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:28:27,751 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:28:29,752 - INFO - 
+============================================================
+2025-12-09 23:28:29,752 - INFO - SUMMARY
+2025-12-09 23:28:29,752 - INFO - ============================================================
+2025-12-09 23:28:29,752 - INFO - Total new accepted listings: 1
+2025-12-09 23:28:29,752 - INFO - Results saved to: filtered_listings.json
+2025-12-09 23:28:29,752 - INFO - ============================================================
+2025-12-09 23:28:29,753 - INFO - 
+1 new listings found! Sending email...
+2025-12-09 23:28:29,753 - INFO - ============================================================
+2025-12-09 23:28:29,753 - INFO - EMAIL CONTENT:
+2025-12-09 23:28:29,753 - INFO - ============================================================
+2025-12-09 23:28:29,753 - INFO - • 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:28:29,753 - INFO -   Marka: Kia Rio
+2025-12-09 23:28:29,753 - INFO -   Fiyat: 1.039.850 TL
+2025-12-09 23:28:29,753 - INFO -   Yıl: 2020 | KM: 31.000
+2025-12-09 23:28:29,753 - INFO -   Boya: 2 | Değişen: 1
+2025-12-09 23:28:29,753 - INFO -   Link: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:28:29,753 - INFO - 
+2025-12-09 23:28:29,753 - INFO - ============================================================
+2025-12-09 23:28:30,894 - INFO - Email sent successfully!
+2025-12-09 23:28:30,894 - INFO - 
+Scheduler started. Checking every 30 minutes...
+2025-12-09 23:28:30,894 - INFO - Press Ctrl+C to stop
+2025-12-09 23:30:47,826 - INFO - 
+Stopping scraper...
+2025-12-09 23:30:47,827 - INFO - Closing browser...
+2025-12-09 23:35:07,544 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:35:07,544 - INFO - Check interval: 30 minutes
+2025-12-09 23:35:07,544 - INFO - Max replaced parts: 1
+2025-12-09 23:35:07,544 - INFO - Max painted parts: 2
+2025-12-09 23:35:07,544 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:35:08,277 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:35:10,180 - INFO - Driver initialized successfully
+2025-12-09 23:35:10,180 - INFO - 
+============================================================
+2025-12-09 23:35:10,181 - INFO - Checking brand: Kia Rio
+2025-12-09 23:35:10,181 - INFO - ============================================================
+2025-12-09 23:35:10,181 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:35:15,847 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:35:15,847 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:35:20,847 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:35:20,888 - INFO - Waiting for challenge to complete...
+2025-12-09 23:35:28,888 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:35:31,918 - INFO - Search results page loaded
+2025-12-09 23:35:31,971 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:35:31,971 - INFO - Total listings found: 1
+2025-12-09 23:35:31,971 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:35:31,971 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:35:31,971 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:35:45,595 - INFO - Damage info - Replaced: 1, Painted: 2, Local Painted: 0
+2025-12-09 23:35:45,595 - INFO - ✓ ACCEPTED: 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:35:45,595 - INFO -   Replaced parts: 1/1
+2025-12-09 23:35:45,595 - INFO -   Painted parts: 2/2
+2025-12-09 23:35:45,595 - INFO -   Price: 1.039.850 TL
+2025-12-09 23:35:45,595 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay
+2025-12-09 23:35:47,596 - INFO - 
+============================================================
+2025-12-09 23:35:47,596 - INFO - Checking brand: Fiat Egea
+2025-12-09 23:35:47,596 - INFO - ============================================================
+2025-12-09 23:35:47,596 - INFO - Navigating to: https://www.sahibinden.com/fiat-egea-1.6-multijet-urban-plus/otomatik?a109_max=2&a13_min=2020&pagingSize=50&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:36:03,287 - INFO - Search results page loaded
+2025-12-09 23:36:03,369 - INFO - Found listing: 1287176693 - 2020 MODEL FİAT EGEA 1.6 MLTJ 120HP URBAN PLUS SADECE 56BİNDE
+2025-12-09 23:36:03,369 - INFO - Found listing: 1287013973 - 68 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:36:03,370 - INFO - Found listing: 1287008164 - 59 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:36:03,370 - INFO - Found listing: 1272838187 - -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:36:03,370 - INFO - Found listing: 1286989311 - 2020-MODEL-FİAT -EGEA-1.6-URBAN-­PLUS-60-BİNDE-O­TOMATİK-BAKIMLI
+2025-12-09 23:36:03,370 - INFO - Found listing: 1272843813 - -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:36:03,370 - INFO - Found listing: 1287321023 - ACİL 75 BİN KM DE SAHİBİNDEN
+2025-12-09 23:36:03,370 - INFO - Found listing: 1287181330 - DEĞİŞENSİZ TRAMERSİZ 3.5 PARÇA BOYALI
+2025-12-09 23:36:03,371 - INFO - Found listing: 1287031171 - GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:36:03,371 - INFO - Found listing: 1286954452 - 2020 MODEL 63BİNDE 1.6 DİZEL OTOMATİK BAKIMLI TEMİZ AİLE ARABASI
+2025-12-09 23:36:03,371 - INFO - Found listing: 1287024553 - GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:36:03,371 - INFO - Found listing: 1286957455 - 2020 MODEL 1.6MJET 120 HP EGA SW URBAN PLUS EMSALSİZ TEMİZLİKTE
+2025-12-09 23:36:03,371 - INFO - Found listing: 1286641021 - MY VİZYONDAN 2020 EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:36:03,371 - INFO - Found listing: 1287009637 - FIRSAT ARABASI.. 1.6 MULTİJET DİZEL OTOMATİK EGEA HB
+2025-12-09 23:36:03,372 - INFO - Found listing: 1286572754 - HASAN BEDİR 2.EL PLAZA'DAN FİAT EGEA URBAN PLUS HATASIZ/BOYASIZ
+2025-12-09 23:36:03,372 - INFO - Found listing: 1287105114 - "2020 FIAT EGEA 1.6 M.JET URBAN PLUS 120 HP"89.000KM-%20KDV
+2025-12-09 23:36:03,372 - INFO - Found listing: 1281119343 - 105 BİN KM'DE FİAT EGEA 1.6 URBAN PLUS OTOMATİK DİJİTAL KLİMA
+2025-12-09 23:36:03,372 - INFO - Found listing: 1286516289 - (MERCEK OTO)+(93.500­KM)+(HATASIZ AYARINDA)
+2025-12-09 23:36:03,372 - INFO - Found listing: 1259321325 - TARKAN'DAN 140 BİN PEŞİNLE 39 BİNDE 2020 EGEA URBAN PLUS
+2025-12-09 23:36:03,372 - INFO - Found listing: 1282968419 - TERTEMİZ 2020 MODEL 93 BİN KM EGEA URBAN PLUS
+2025-12-09 23:36:03,373 - INFO - Found listing: 1286105756 - 2020 MODEL URBAN PLUS 83.000 Km
+2025-12-09 23:36:03,373 - INFO - Found listing: 1283035368 - TOYOTA PLAZA AKSOY'DAN 2020 FİAT EGEA 1.6 M.JET URBAN+ OTOMATİK
+2025-12-09 23:36:03,373 - INFO - Found listing: 1285466019 - BEYHAN AUTO'dan Hatasız,değişensiz!
+2025-12-09 23:36:03,373 - INFO - Found listing: 1282237307 - YET CAR 2020 FİAT EGEA 1.6 Multijet Urban PLUS 94.000 KM
+2025-12-09 23:36:03,373 - INFO - Found listing: 1282440403 - *1.29 KREDİ*2020 EGEA HB URBAN PLUS GERİ GÖRÜŞ/LED FAR/CAR PLAY
+2025-12-09 23:36:03,373 - INFO - Found listing: 1282411077 - CVN'DEN 1,19 KREDİ ORANI-290BİN PEŞİN 36 AY TAKSİT SENET-KK TKST
+2025-12-09 23:36:03,373 - INFO - Found listing: 1282448444 - OTOFENİX 2020 FIAT EGEA 1.6 MULTIJET URBAN PLUS 108.212 KM
+2025-12-09 23:36:03,374 - INFO - Found listing: 1284788604 - SAHİBİNDEN TERTEMİZ KAPALI GARAJ ARACI
+2025-12-09 23:36:03,374 - INFO - Found listing: 1284615660 - ÖĞRETMENDEN DÜŞÜK KM EGEA
+2025-12-09 23:36:03,374 - INFO - Found listing: 1278305377 - "MİRAY" 2020 1.6 DİZEL OTOMATİK 73.000 KM KREDİ & K.KARTI TAKSİT
+2025-12-09 23:36:03,374 - INFO - Found listing: 1283362243 - BOYASIZ DEĞİŞENSİZ EGEA 1.6MJET 120HP DCT MİRROR 108.000km 2020
+2025-12-09 23:36:03,374 - INFO - Found listing: 1282748014 - MERTOĞLU AUTO'DAN 2020 MODEL FİAT EGEA 1.6 MULTİJET EMSALSİZ.
+2025-12-09 23:36:03,374 - INFO - Found listing: 1279837961 - SAHİBİNDEN TEMİZ BAKIMLI ARAÇ
+2025-12-09 23:36:03,375 - INFO - Found listing: 1282200881 - "Berlin Motors"2020/EGEA/G.­GRS/TESLA/DCT/12&36 SENET K.K
+2025-12-09 23:36:03,375 - INFO - Found listing: 1275994633 - BÜYÜKSOYLU FİLO/2020 MODEL FİAT EGEA 1.6 M.JET URBAN PLUS 120 HP
+2025-12-09 23:36:03,375 - INFO - Found listing: 1282788831 - BAKİ 2020 EGEA 1.6 MJET URBAN PLUS
+2025-12-09 23:36:03,375 - INFO - Total listings found: 36
+2025-12-09 23:36:03,375 - INFO - Processing 36 listings for Fiat Egea...
+2025-12-09 23:36:03,375 - INFO - 
+--- Processing listing 1/36 ---
+2025-12-09 23:36:03,375 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-fiat-egea-1.6-mltj-120hp-urban-plus-sadece-56binde-1287176693/detay
+2025-12-09 23:36:16,882 - INFO - Damage info - Replaced: 1, Painted: 1, Local Painted: 0
+2025-12-09 23:36:16,882 - INFO - ✓ ACCEPTED: 2020 MODEL FİAT EGEA 1.6 MLTJ 120HP URBAN PLUS SADECE 56BİNDE
+2025-12-09 23:36:16,882 - INFO -   Replaced parts: 1/1
+2025-12-09 23:36:16,883 - INFO -   Painted parts: 1/2
+2025-12-09 23:36:16,883 - INFO -   Price: 1.013.850 TL
+2025-12-09 23:36:16,883 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-fiat-egea-1.6-mltj-120hp-urban-plus-sadece-56binde-1287176693/detay
+2025-12-09 23:36:18,883 - INFO - 
+--- Processing listing 2/36 ---
+2025-12-09 23:36:18,883 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-68-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287013973/detay
+2025-12-09 23:36:32,727 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 2
+2025-12-09 23:36:32,727 - INFO - ✓ ACCEPTED: 68 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:36:32,727 - INFO -   Replaced parts: 0/1
+2025-12-09 23:36:32,727 - INFO -   Painted parts: 0/2
+2025-12-09 23:36:32,727 - INFO -   Price: 1.047.500 TL
+2025-12-09 23:36:32,727 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-68-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287013973/detay
+2025-12-09 23:36:34,728 - INFO - 
+--- Processing listing 3/36 ---
+2025-12-09 23:36:34,728 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-59-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287008164/detay
+2025-12-09 23:36:48,298 - INFO - Damage info - Replaced: 1, Painted: 1, Local Painted: 0
+2025-12-09 23:36:48,298 - INFO - ✓ ACCEPTED: 59 BİN KM 2020 EGEA URBAN PLUS 1.6 DİZEL OTOMATİK
+2025-12-09 23:36:48,298 - INFO -   Replaced parts: 1/1
+2025-12-09 23:36:48,298 - INFO -   Painted parts: 1/2
+2025-12-09 23:36:48,298 - INFO -   Price: 999.750 TL
+2025-12-09 23:36:48,298 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-59-bin-km-2020-egea-urban-plus-1.6-dizel-otomatik-1287008164/detay
+2025-12-09 23:36:50,299 - INFO - 
+--- Processing listing 4/36 ---
+2025-12-09 23:36:50,299 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-cmr-premium-2020-fiat-egea-1.6-multijet-urban-plus-dct-1272838187/detay
+2025-12-09 23:37:03,723 - INFO - Damage info - Replaced: 2, Painted: 1, Local Painted: 0
+2025-12-09 23:37:03,723 - INFO - ✗ REJECTED: -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:37:03,723 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:37:03,723 - INFO -   Painted parts: 1/2
+2025-12-09 23:37:05,724 - INFO - 
+--- Processing listing 5/36 ---
+2025-12-09 23:37:05,724 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-fiat-egea-1.6-urban-plus-60-binde-otomatik-bakimli-1286989311/detay
+2025-12-09 23:37:19,152 - INFO - Damage info - Replaced: 3, Painted: 0, Local Painted: 0
+2025-12-09 23:37:19,152 - INFO - ✗ REJECTED: 2020-MODEL-FİAT -EGEA-1.6-URBAN-­PLUS-60-BİNDE-O­TOMATİK-BAKIMLI
+2025-12-09 23:37:19,152 - INFO -   Replaced parts: 3/1 (exceeded)
+2025-12-09 23:37:19,152 - INFO -   Painted parts: 0/2
+2025-12-09 23:37:21,153 - INFO - 
+--- Processing listing 6/36 ---
+2025-12-09 23:37:21,153 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-cmr-premium-2020-fiat-egea-1.6-multijet-urban-plus-dct-1272843813/detay
+2025-12-09 23:37:34,543 - INFO - Damage info - Replaced: 2, Painted: 3, Local Painted: 1
+2025-12-09 23:37:34,544 - INFO - ✗ REJECTED: -CMR PREMIUM-2020 FİAT EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:37:34,544 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:37:34,544 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:37:36,544 - INFO - 
+--- Processing listing 7/36 ---
+2025-12-09 23:37:36,544 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-acil-75-bin-km-de-sahibinden-1287321023/detay
+2025-12-09 23:37:50,084 - INFO - Damage info - Replaced: 2, Painted: 1, Local Painted: 3
+2025-12-09 23:37:50,084 - INFO - ✗ REJECTED: ACİL 75 BİN KM DE SAHİBİNDEN
+2025-12-09 23:37:50,084 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:37:50,084 - INFO -   Painted parts: 1/2
+2025-12-09 23:37:52,085 - INFO - 
+--- Processing listing 8/36 ---
+2025-12-09 23:37:52,085 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-degisensiz-tramersiz-3.5-parca-boyali-1287181330/detay
+2025-12-09 23:38:05,641 - INFO - Damage info - Replaced: 0, Painted: 3, Local Painted: 0
+2025-12-09 23:38:05,641 - INFO - ✗ REJECTED: DEĞİŞENSİZ TRAMERSİZ 3.5 PARÇA BOYALI
+2025-12-09 23:38:05,641 - INFO -   Replaced parts: 0/1
+2025-12-09 23:38:05,642 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:38:07,642 - INFO - 
+--- Processing listing 9/36 ---
+2025-12-09 23:38:07,642 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287031171/detay
+2025-12-09 23:38:21,223 - INFO - Damage info - Replaced: 1, Painted: 0, Local Painted: 1
+2025-12-09 23:38:21,223 - INFO - ✓ ACCEPTED: GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:38:21,223 - INFO -   Replaced parts: 1/1
+2025-12-09 23:38:21,224 - INFO -   Painted parts: 0/2
+2025-12-09 23:38:21,224 - INFO -   Price: 1.049.900 TL
+2025-12-09 23:38:21,224 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287031171/detay
+2025-12-09 23:38:23,224 - INFO - 
+--- Processing listing 10/36 ---
+2025-12-09 23:38:23,224 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-63binde-1.6-dizel-otomatik-bakimli-temiz-aile-arabasi-1286954452/detay
+2025-12-09 23:38:36,812 - INFO - Damage info - Replaced: 1, Painted: 3, Local Painted: 0
+2025-12-09 23:38:36,813 - INFO - ✗ REJECTED: 2020 MODEL 63BİNDE 1.6 DİZEL OTOMATİK BAKIMLI TEMİZ AİLE ARABASI
+2025-12-09 23:38:36,813 - INFO -   Replaced parts: 1/1
+2025-12-09 23:38:36,813 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:38:38,813 - INFO - 
+--- Processing listing 11/36 ---
+2025-12-09 23:38:38,813 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287024553/detay
+2025-12-09 23:38:52,376 - INFO - Damage info - Replaced: 0, Painted: 2, Local Painted: 0
+2025-12-09 23:38:52,376 - INFO - ✓ ACCEPTED: GÖLOVADAN..FİAT EGEA..1.6 M.JET..URBAN PLUS..120 HP..OTOMATİK...
+2025-12-09 23:38:52,376 - INFO -   Replaced parts: 0/1
+2025-12-09 23:38:52,376 - INFO -   Painted parts: 2/2
+2025-12-09 23:38:52,376 - INFO -   Price: 1.049.900 TL
+2025-12-09 23:38:52,376 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-golovadan..fiat-egea..1.6-m.jet..urban-plus..120-hp..otomatik-1287024553/detay
+2025-12-09 23:38:54,376 - INFO - 
+--- Processing listing 12/36 ---
+2025-12-09 23:38:54,377 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-1.6mjet-120-hp-ega-sw-urban-plus-emsalsiz-temizlikte-1286957455/detay
+2025-12-09 23:39:07,879 - INFO - Damage info - Replaced: 2, Painted: 1, Local Painted: 2
+2025-12-09 23:39:07,879 - INFO - ✗ REJECTED: 2020 MODEL 1.6MJET 120 HP EGA SW URBAN PLUS EMSALSİZ TEMİZLİKTE
+2025-12-09 23:39:07,879 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:39:07,879 - INFO -   Painted parts: 1/2
+2025-12-09 23:39:09,879 - INFO - 
+--- Processing listing 13/36 ---
+2025-12-09 23:39:09,880 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-my-vizyondan-2020-egea-1.6-multijet-urban-plus-dct-1286641021/detay
+2025-12-09 23:39:23,334 - INFO - Damage info - Replaced: 0, Painted: 2, Local Painted: 1
+2025-12-09 23:39:23,334 - INFO - ✓ ACCEPTED: MY VİZYONDAN 2020 EGEA 1.6 MULTİJET URBAN PLUS DCT
+2025-12-09 23:39:23,335 - INFO -   Replaced parts: 0/1
+2025-12-09 23:39:23,335 - INFO -   Painted parts: 2/2
+2025-12-09 23:39:23,335 - INFO -   Price: 1.030.000 TL
+2025-12-09 23:39:23,335 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-my-vizyondan-2020-egea-1.6-multijet-urban-plus-dct-1286641021/detay
+2025-12-09 23:39:25,335 - INFO - 
+--- Processing listing 14/36 ---
+2025-12-09 23:39:25,335 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-firsat-arabasi-1.6-multijet-dizel-otomatik-egea-hb-1287009637/detay
+2025-12-09 23:39:38,889 - INFO - Damage info - Replaced: 0, Painted: 5, Local Painted: 0
+2025-12-09 23:39:38,889 - INFO - ✗ REJECTED: FIRSAT ARABASI.. 1.6 MULTİJET DİZEL OTOMATİK EGEA HB
+2025-12-09 23:39:38,889 - INFO -   Replaced parts: 0/1
+2025-12-09 23:39:38,889 - INFO -   Painted parts: 5/2 (exceeded)
+2025-12-09 23:39:40,890 - INFO - 
+--- Processing listing 15/36 ---
+2025-12-09 23:39:40,890 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-hasan-bedir-2.el-plaza-dan-fiat-egea-urban-plus-hatasiz-boyasiz-1286572754/detay
+2025-12-09 23:39:55,313 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0
+2025-12-09 23:39:55,313 - INFO - ✓ ACCEPTED: HASAN BEDİR 2.EL PLAZA'DAN FİAT EGEA URBAN PLUS HATASIZ/BOYASIZ
+2025-12-09 23:39:55,313 - INFO -   Replaced parts: 0/1
+2025-12-09 23:39:55,313 - INFO -   Painted parts: 0/2
+2025-12-09 23:39:55,313 - INFO -   Price: 1.028.850 TL
+2025-12-09 23:39:55,313 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-hasan-bedir-2.el-plaza-dan-fiat-egea-urban-plus-hatasiz-boyasiz-1286572754/detay
+2025-12-09 23:39:57,314 - INFO - 
+--- Processing listing 16/36 ---
+2025-12-09 23:39:57,314 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-fiat-egea-1.6-m.jet-urban-plus-120-hp-89.000km-20kdv-1287105114/detay
+2025-12-09 23:40:10,882 - INFO - Damage info - Replaced: 2, Painted: 3, Local Painted: 1
+2025-12-09 23:40:10,883 - INFO - ✗ REJECTED: "2020 FIAT EGEA 1.6 M.JET URBAN PLUS 120 HP"89.000KM-%20KDV
+2025-12-09 23:40:10,883 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:40:10,883 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:40:12,883 - INFO - 
+--- Processing listing 17/36 ---
+2025-12-09 23:40:12,883 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-105-bin-km-de-fiat-egea-1.6-urban-plus-otomatik-dijital-klima-1281119343/detay
+2025-12-09 23:40:26,327 - INFO - Damage info - Replaced: 0, Painted: 1, Local Painted: 1
+2025-12-09 23:40:26,328 - INFO - ✓ ACCEPTED: 105 BİN KM'DE FİAT EGEA 1.6 URBAN PLUS OTOMATİK DİJİTAL KLİMA
+2025-12-09 23:40:26,328 - INFO -   Replaced parts: 0/1
+2025-12-09 23:40:26,328 - INFO -   Painted parts: 1/2
+2025-12-09 23:40:26,328 - INFO -   Price: 1.015.000 TL
+2025-12-09 23:40:26,328 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-105-bin-km-de-fiat-egea-1.6-urban-plus-otomatik-dijital-klima-1281119343/detay
+2025-12-09 23:40:28,328 - INFO - 
+--- Processing listing 18/36 ---
+2025-12-09 23:40:28,328 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-mercek-oto-plus-93.500km-plus-hatasiz-ayarinda-1286516289/detay
+2025-12-09 23:40:41,754 - INFO - Damage info - Replaced: 0, Painted: 1, Local Painted: 0
+2025-12-09 23:40:41,754 - INFO - ✓ ACCEPTED: (MERCEK OTO)+(93.500­KM)+(HATASIZ AYARINDA)
+2025-12-09 23:40:41,754 - INFO -   Replaced parts: 0/1
+2025-12-09 23:40:41,754 - INFO -   Painted parts: 1/2
+2025-12-09 23:40:41,754 - INFO -   Price: 995.000 TL
+2025-12-09 23:40:41,754 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-mercek-oto-plus-93.500km-plus-hatasiz-ayarinda-1286516289/detay
+2025-12-09 23:40:43,754 - INFO - 
+--- Processing listing 19/36 ---
+2025-12-09 23:40:43,755 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-tarkan-dan-140-bin-pesinle-39-binde-2020-egea-urban-plus-1259321325/detay
+2025-12-09 23:40:57,415 - INFO - Damage info - Replaced: 3, Painted: 8, Local Painted: 0
+2025-12-09 23:40:57,415 - INFO - ✗ REJECTED: TARKAN'DAN 140 BİN PEŞİNLE 39 BİNDE 2020 EGEA URBAN PLUS
+2025-12-09 23:40:57,415 - INFO -   Replaced parts: 3/1 (exceeded)
+2025-12-09 23:40:57,415 - INFO -   Painted parts: 8/2 (exceeded)
+2025-12-09 23:40:59,415 - INFO - 
+--- Processing listing 20/36 ---
+2025-12-09 23:40:59,416 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-tertemiz-2020-model-93-bin-km-egea-urban-plus-1282968419/detay
+2025-12-09 23:41:12,937 - INFO - Damage info - Replaced: 3, Painted: 2, Local Painted: 2
+2025-12-09 23:41:12,937 - INFO - ✗ REJECTED: TERTEMİZ 2020 MODEL 93 BİN KM EGEA URBAN PLUS
+2025-12-09 23:41:12,937 - INFO -   Replaced parts: 3/1 (exceeded)
+2025-12-09 23:41:12,937 - INFO -   Painted parts: 2/2
+2025-12-09 23:41:14,938 - INFO - 
+--- Processing listing 21/36 ---
+2025-12-09 23:41:14,938 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-2020-model-urban-plus-83.000-km-1286105756/detay
+2025-12-09 23:41:28,452 - INFO - Damage info - Replaced: 2, Painted: 4, Local Painted: 0
+2025-12-09 23:41:28,452 - INFO - ✗ REJECTED: 2020 MODEL URBAN PLUS 83.000 Km
+2025-12-09 23:41:28,452 - INFO -   Replaced parts: 2/1 (exceeded)
+2025-12-09 23:41:28,452 - INFO -   Painted parts: 4/2 (exceeded)
+2025-12-09 23:41:30,452 - INFO - 
+--- Processing listing 22/36 ---
+2025-12-09 23:41:30,453 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-toyota-plaza-aksoy-dan-2020-fiat-egea-1.6-m.jet-urban-plus-otomatik-1283035368/detay
+2025-12-09 23:41:43,861 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0
+2025-12-09 23:41:43,862 - INFO - ✓ ACCEPTED: TOYOTA PLAZA AKSOY'DAN 2020 FİAT EGEA 1.6 M.JET URBAN+ OTOMATİK
+2025-12-09 23:41:43,862 - INFO -   Replaced parts: 0/1
+2025-12-09 23:41:43,862 - INFO -   Painted parts: 0/2
+2025-12-09 23:41:43,862 - INFO -   Price: 1.039.900 TL
+2025-12-09 23:41:43,862 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-toyota-plaza-aksoy-dan-2020-fiat-egea-1.6-m.jet-urban-plus-otomatik-1283035368/detay
+2025-12-09 23:41:45,862 - INFO - 
+--- Processing listing 23/36 ---
+2025-12-09 23:41:45,863 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-beyhan-auto-dan-hatasiz,degisensiz-1285466019/detay
+2025-12-09 23:41:59,317 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0
+2025-12-09 23:41:59,317 - INFO - ✓ ACCEPTED: BEYHAN AUTO'dan Hatasız,değişensiz!
+2025-12-09 23:41:59,317 - INFO -   Replaced parts: 0/1
+2025-12-09 23:41:59,317 - INFO -   Painted parts: 0/2
+2025-12-09 23:41:59,317 - INFO -   Price: 1.050.000 TL
+2025-12-09 23:41:59,317 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-beyhan-auto-dan-hatasiz,degisensiz-1285466019/detay
+2025-12-09 23:42:01,318 - INFO - 
+--- Processing listing 24/36 ---
+2025-12-09 23:42:01,318 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-yet-car-2020-fiat-egea-1.6-multijet-urban-plus-94.000-km-1282237307/detay
+2025-12-09 23:42:14,732 - INFO - Damage info - Replaced: 1, Painted: 7, Local Painted: 0
+2025-12-09 23:42:14,732 - INFO - ✗ REJECTED: YET CAR 2020 FİAT EGEA 1.6 Multijet Urban PLUS 94.000 KM
+2025-12-09 23:42:14,732 - INFO -   Replaced parts: 1/1
+2025-12-09 23:42:14,732 - INFO -   Painted parts: 7/2 (exceeded)
+2025-12-09 23:42:16,732 - INFO - 
+--- Processing listing 25/36 ---
+2025-12-09 23:42:16,732 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-1.29-kredi-2020-egea-hb-urban-plus-geri-gorus-led-far-car-play-1282440403/detay
+2025-12-09 23:42:30,652 - INFO - Damage info - Replaced: 0, Painted: 4, Local Painted: 1
+2025-12-09 23:42:30,652 - INFO - ✗ REJECTED: *1.29 KREDİ*2020 EGEA HB URBAN PLUS GERİ GÖRÜŞ/LED FAR/CAR PLAY
+2025-12-09 23:42:30,652 - INFO -   Replaced parts: 0/1
+2025-12-09 23:42:30,652 - INFO -   Painted parts: 4/2 (exceeded)
+2025-12-09 23:42:32,653 - INFO - 
+--- Processing listing 26/36 ---
+2025-12-09 23:42:32,653 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-cvn-den-1,19-kredi-orani-290bin-pesin-36-ay-taksit-senet-kk-tkst-1282411077/detay
+2025-12-09 23:42:46,075 - INFO - Damage info - Replaced: 0, Painted: 4, Local Painted: 0
+2025-12-09 23:42:46,075 - INFO - ✗ REJECTED: CVN'DEN 1,19 KREDİ ORANI-290BİN PEŞİN 36 AY TAKSİT SENET-KK TKST
+2025-12-09 23:42:46,075 - INFO -   Replaced parts: 0/1
+2025-12-09 23:42:46,075 - INFO -   Painted parts: 4/2 (exceeded)
+2025-12-09 23:42:48,076 - INFO - 
+--- Processing listing 27/36 ---
+2025-12-09 23:42:48,076 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-otofenix-2020-fiat-egea-1.6-multijet-urban-plus-108.212-km-1282448444/detay
+2025-12-09 23:43:01,530 - INFO - Damage info - Replaced: 1, Painted: 3, Local Painted: 2
+2025-12-09 23:43:01,530 - INFO - ✗ REJECTED: OTOFENİX 2020 FIAT EGEA 1.6 MULTIJET URBAN PLUS 108.212 KM
+2025-12-09 23:43:01,531 - INFO -   Replaced parts: 1/1
+2025-12-09 23:43:01,531 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:43:03,531 - INFO - 
+--- Processing listing 28/36 ---
+2025-12-09 23:43:03,531 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-tertemiz-kapali-garaj-araci-1284788604/detay
+2025-12-09 23:43:17,121 - INFO - Damage info - Replaced: 1, Painted: 0, Local Painted: 2
+2025-12-09 23:43:17,121 - INFO - ✓ ACCEPTED: SAHİBİNDEN TERTEMİZ KAPALI GARAJ ARACI
+2025-12-09 23:43:17,121 - INFO -   Replaced parts: 1/1
+2025-12-09 23:43:17,121 - INFO -   Painted parts: 0/2
+2025-12-09 23:43:17,122 - INFO -   Price: 965.000 TL
+2025-12-09 23:43:17,122 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-tertemiz-kapali-garaj-araci-1284788604/detay
+2025-12-09 23:43:19,122 - INFO - 
+--- Processing listing 29/36 ---
+2025-12-09 23:43:19,122 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-ogretmenden-dusuk-km-egea-1284615660/detay
+2025-12-09 23:43:32,653 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0
+2025-12-09 23:43:32,653 - INFO - ✓ ACCEPTED: ÖĞRETMENDEN DÜŞÜK KM EGEA
+2025-12-09 23:43:32,653 - INFO -   Replaced parts: 0/1
+2025-12-09 23:43:32,653 - INFO -   Painted parts: 0/2
+2025-12-09 23:43:32,653 - INFO -   Price: 1.050.000 TL
+2025-12-09 23:43:32,653 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-ogretmenden-dusuk-km-egea-1284615660/detay
+2025-12-09 23:43:34,654 - INFO - 
+--- Processing listing 30/36 ---
+2025-12-09 23:43:34,654 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-miray-2020-1.6-dizel-otomatik-73.000-km-kredi-k.karti-taksit-1278305377/detay
+2025-12-09 23:43:48,175 - INFO - Damage info - Replaced: 1, Painted: 1, Local Painted: 0
+2025-12-09 23:43:48,176 - INFO - ✓ ACCEPTED: "MİRAY" 2020 1.6 DİZEL OTOMATİK 73.000 KM KREDİ & K.KARTI TAKSİT
+2025-12-09 23:43:48,176 - INFO -   Replaced parts: 1/1
+2025-12-09 23:43:48,176 - INFO -   Painted parts: 1/2
+2025-12-09 23:43:48,176 - INFO -   Price: 1.029.000 TL
+2025-12-09 23:43:48,176 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-miray-2020-1.6-dizel-otomatik-73.000-km-kredi-k.karti-taksit-1278305377/detay
+2025-12-09 23:43:50,176 - INFO - 
+--- Processing listing 31/36 ---
+2025-12-09 23:43:50,176 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-boyasiz-degisensiz-egea-1.6mjet-120hp-dct-mirror-108.000km-2020-1283362243/detay
+2025-12-09 23:44:03,790 - INFO - Damage info - Replaced: 0, Painted: 0, Local Painted: 0
+2025-12-09 23:44:03,790 - INFO - ✓ ACCEPTED: BOYASIZ DEĞİŞENSİZ EGEA 1.6MJET 120HP DCT MİRROR 108.000km 2020
+2025-12-09 23:44:03,790 - INFO -   Replaced parts: 0/1
+2025-12-09 23:44:03,790 - INFO -   Painted parts: 0/2
+2025-12-09 23:44:03,790 - INFO -   Price: 1.039.000 TL
+2025-12-09 23:44:03,790 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-boyasiz-degisensiz-egea-1.6mjet-120hp-dct-mirror-108.000km-2020-1283362243/detay
+2025-12-09 23:44:05,791 - INFO - 
+--- Processing listing 32/36 ---
+2025-12-09 23:44:05,791 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-mertoglu-auto-dan-2020-model-fiat-egea-1.6-multijet-emsalsiz-1282748014/detay
+2025-12-09 23:44:19,363 - INFO - Damage info - Replaced: 0, Painted: 3, Local Painted: 0
+2025-12-09 23:44:19,363 - INFO - ✗ REJECTED: MERTOĞLU AUTO'DAN 2020 MODEL FİAT EGEA 1.6 MULTİJET EMSALSİZ.
+2025-12-09 23:44:19,363 - INFO -   Replaced parts: 0/1
+2025-12-09 23:44:19,363 - INFO -   Painted parts: 3/2 (exceeded)
+2025-12-09 23:44:21,364 - INFO - 
+--- Processing listing 33/36 ---
+2025-12-09 23:44:21,364 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-temiz-bakimli-arac-1279837961/detay
+2025-12-09 23:44:34,925 - INFO - Damage info - Replaced: 0, Painted: 2, Local Painted: 1
+2025-12-09 23:44:34,926 - INFO - ✓ ACCEPTED: SAHİBİNDEN TEMİZ BAKIMLI ARAÇ
+2025-12-09 23:44:34,926 - INFO -   Replaced parts: 0/1
+2025-12-09 23:44:34,926 - INFO -   Painted parts: 2/2
+2025-12-09 23:44:34,926 - INFO -   Price: 1.045.000 TL
+2025-12-09 23:44:34,926 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-sahibinden-temiz-bakimli-arac-1279837961/detay
+2025-12-09 23:44:36,926 - INFO - 
+--- Processing listing 34/36 ---
+2025-12-09 23:44:36,926 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-berlin-motors-2020-egea-g.grs-tesla-dct-12-36-senet-k.k-1282200881/detay
+2025-12-09 23:44:50,501 - INFO - Damage info - Replaced: 0, Painted: 1, Local Painted: 0
+2025-12-09 23:44:50,501 - INFO - ✓ ACCEPTED: "Berlin Motors"2020/EGEA/G.­GRS/TESLA/DCT/12&36 SENET K.K
+2025-12-09 23:44:50,501 - INFO -   Replaced parts: 0/1
+2025-12-09 23:44:50,501 - INFO -   Painted parts: 1/2
+2025-12-09 23:44:50,501 - INFO -   Price: 1.010.000 TL
+2025-12-09 23:44:50,501 - INFO -   URL: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-berlin-motors-2020-egea-g.grs-tesla-dct-12-36-senet-k.k-1282200881/detay
+2025-12-09 23:44:52,501 - INFO - 
+--- Processing listing 35/36 ---
+2025-12-09 23:44:52,502 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-fiat-buyuksoylu-filo-2020-model-fiat-egea-1.6-m.jet-urban-plus-120-hp-1275994633/detay
+2025-12-09 23:45:18,356 - INFO - Starting Sahibinden Scraper...
+2025-12-09 23:45:18,357 - INFO - Check interval: 30 minutes
+2025-12-09 23:45:18,357 - INFO - Max replaced parts: 1
+2025-12-09 23:45:18,357 - INFO - Max painted parts: 2
+2025-12-09 23:45:18,357 - INFO - Initializing undetected Chrome driver...
+2025-12-09 23:45:19,077 - INFO - patching driver executable C:\Users\t0fifeen\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-12-09 23:45:20,990 - INFO - Driver initialized successfully
+2025-12-09 23:45:20,990 - INFO - 
+============================================================
+2025-12-09 23:45:20,990 - INFO - Checking brand: Kia Rio
+2025-12-09 23:45:20,990 - INFO - ============================================================
+2025-12-09 23:45:20,990 - INFO - Navigating to: https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000
+2025-12-09 23:45:26,742 - INFO - Cloudflare Turnstile challenge detected!
+2025-12-09 23:45:26,742 - INFO - Waiting for Turnstile widget to load...
+2025-12-09 23:45:31,743 - INFO - Clicking 'Devam Et' button...
+2025-12-09 23:45:31,792 - INFO - Waiting for challenge to complete...
+2025-12-09 23:45:39,792 - INFO - Cloudflare challenge handled, continuing...
+2025-12-09 23:45:42,801 - INFO - Search results page loaded
+2025-12-09 23:45:42,844 - INFO - Found listing: 1286652975 - 2020 MODEL RIO 1.4 ELEGANCE TEKNO SADECE 31 BİN KM
+2025-12-09 23:45:42,844 - INFO - Total listings found: 1
+2025-12-09 23:45:42,844 - INFO - Processing 1 listings for Kia Rio...
+2025-12-09 23:45:42,844 - INFO - 
+--- Processing listing 1/1 ---
+2025-12-09 23:45:42,844 - INFO - Checking damage info for: https://www.sahibinden.com/ilan/vasita-otomobil-kia-2020-model-rio-1.4-elegance-tekno-sadece-31-bin-km-1286652975/detay

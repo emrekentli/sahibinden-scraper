@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(copy:*)",
+      "Bash(python sahibinden_scraper.py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

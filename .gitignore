@@ -1,0 +1,11 @@
+.env
+seen_ads.json
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+

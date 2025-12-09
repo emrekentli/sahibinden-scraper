@@ -1,0 +1,17 @@
+{
+  "check_interval_minutes": 30,
+  "max_replaced_parts": 1,
+  "max_painted_parts": 2,
+  "brands": [
+    {
+      "name": "Kia Rio",
+      "url": "https://www.sahibinden.com/kia-rio-1.4-cvvt-elegance-tekno?a109_max=2&a13_min=2020&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000",
+      "enabled": true
+    },
+    {
+      "name": "Fiat Egea",
+      "url": "https://www.sahibinden.com/fiat-egea-1.6-multijet-urban-plus/otomatik?a109_max=2&a13_min=2020&pagingSize=50&a116445=1263354&a4_max=110000&a5_min=2020&a20_max=1050000&price_max=1050000",
+      "enabled": true
+    }
+  ]
+}
