@@ -1,5 +1,11 @@
+# Environment
 .env
+
+# Data files
 seen_ads.json
+filtered_listings.json
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -8,4 +14,17 @@ __pycache__/
 venv/
 env/
 ENV/
+
+# Logs
+*.log
+error_screenshot.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test
+test_email.py
 

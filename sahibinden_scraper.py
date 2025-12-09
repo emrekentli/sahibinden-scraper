@@ -26,7 +26,9 @@ class SahibindenScraper:
         self.max_replaced_parts = self.config.get('max_replaced_parts', 1)
         self.max_painted_parts = self.config.get('max_painted_parts', 2)
         self.filtered_listings = []
-        self.seen_ads_file = 'seen_ads.json'
+        # Docker volume'da saklamak için /app/data kullan, yoksa mevcut dizin
+        import os
+        self.seen_ads_file = '/app/data/seen_ads.json' if os.path.exists('/app/data') else 'seen_ads.json'
         self.seen_ads = self.load_seen_ads()
         self.email_sender = EmailSender()
 
