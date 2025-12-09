@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Loglar - Sahibinden Scraper{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="card-title mb-0"><i class="fas fa-terminal"></i> Sistem Logları</h5>
+                    <div>
+                        <button class="btn btn-sm btn-primary" onclick="refreshLogs()">
+                            <i class="fas fa-sync"></i> Yenile
+                        </button>
+                        <a href="/" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-arrow-left"></i> Geri
+                        </a>
+                    </div>
+                </div>
+
+                <div class="log-container" id="log-container" style="max-height: 600px;">
+                    {% for log in logs %}
+                    <div class="log-line">{{ log }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function refreshLogs() {
+    $.get('/api/logs?limit=200', function(data) {
+        var container = $('#log-container');
+        container.empty();
+        data.logs.forEach(function(log) {
+            container.append('<div class="log-line">' + log + '</div>');
+        });
+        container.scrollTop(container[0].scrollHeight);
+    });
+}
+
+// Auto-refresh every 5 seconds
+setInterval(refreshLogs, 5000);
+
+// WebSocket for real-time logs
+var socket = io();
+socket.on('connect', function() {
+    console.log('Connected to WebSocket');
+});
+
+socket.on('logs_update', function(data) {
+    var container = $('#log-container');
+    container.empty();
+    data.logs.forEach(function(log) {
+        container.append('<div class="log-line">' + log + '</div>');
+    });
+    container.scrollTop(container[0].scrollHeight);
+});
+
+// Request logs
+socket.emit('request_logs');
+setInterval(function() {
+    socket.emit('request_logs');
+}, 5000);
+
+// Scroll to bottom on load
+$(document).ready(function() {
+    var container = $('#log-container');
+    container.scrollTop(container[0].scrollHeight);
+});
+</script>
+{% endblock %}

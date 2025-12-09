@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Sahibinden Scraper{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Stats Cards -->
+    <div class="col-md-3 mb-4">
+        <div class="card stat-card">
+            <div class="card-body text-center">
+                <i class="fas fa-car fa-3x mb-3"></i>
+                <h3>{{ stats.enabled_brands }}</h3>
+                <p class="mb-0">Aktif Marka</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card stat-card success">
+            <div class="card-body text-center">
+                <i class="fas fa-list-check fa-3x mb-3"></i>
+                <h3>{{ stats.total_listings }}</h3>
+                <p class="mb-0">Toplam İlan</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card stat-card warning">
+            <div class="card-body text-center">
+                <i class="fas fa-clock fa-3x mb-3"></i>
+                <h3>{{ stats.check_interval }}</h3>
+                <p class="mb-0">Dakika Aralık</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card stat-card info">
+            <div class="card-body text-center">
+                <i class="fas fa-circle-dot fa-3x mb-3"></i>
+                <h3 id="status-text">{{ 'Çalışıyor' if stats.scraper_running else 'Durdu' }}</h3>
+                <p class="mb-0">Durum</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Control Panel -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-gamepad"></i> Kontrol Paneli</h5>
+                <div class="btn-group" role="group">
+                    <button class="btn btn-success btn-custom" onclick="startScraper()">
+                        <i class="fas fa-play"></i> Başlat
+                    </button>
+                    <button class="btn btn-danger btn-custom" onclick="stopScraper()">
+                        <i class="fas fa-stop"></i> Durdur
+                    </button>
+                    <button class="btn btn-primary btn-custom" onclick="runNow()">
+                        <i class="fas fa-bolt"></i> Şimdi Çalıştır
+                    </button>
+                    <button class="btn btn-warning btn-custom" data-bs-toggle="modal" data-bs-target="#cookieModal">
+                        <i class="fas fa-cookie"></i> Cookie Yükle
+                    </button>
+                </div>
+                <span class="ms-3">
+                    <i class="fas fa-cookie-bite"></i>
+                    Cookie: <strong>{{ 'Yüklü' if stats.has_cookies else 'Yok' }}</strong>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Listings -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-list"></i> Son Bulunan İlanlar</h5>
+                {% if listings %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Marka</th>
+                                <th>Başlık</th>
+                                <th>Fiyat</th>
+                                <th>Yıl / KM</th>
+                                <th>Boya/Değişen</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for listing in listings %}
+                            <tr>
+                                <td><strong>{{ listing.brand }}</strong></td>
+                                <td>{{ listing.title[:50] }}...</td>
+                                <td><span class="badge bg-success">{{ listing.price }}</span></td>
+                                <td>{{ listing.year }} / {{ listing.km }}</td>
+                                <td>
+                                    <span class="badge bg-warning">{{ listing.damage_info.painted_count }} Boya</span>
+                                    <span class="badge bg-danger">{{ listing.damage_info.replaced_count }} Değişen</span>
+                                </td>
+                                <td>
+                                    <a href="{{ listing.url }}" target="_blank" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i> Aç
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <a href="/listings" class="btn btn-outline-primary">Tüm İlanları Gör</a>
+                {% else %}
+                <p class="text-muted">Henüz ilan bulunamadı.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Logs -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-terminal"></i> Son Loglar</h5>
+                <div class="log-container" id="log-container">
+                    {% for log in logs %}
+                    <div class="log-line">{{ log }}</div>
+                    {% endfor %}
+                </div>
+                <a href="/logs" class="btn btn-outline-primary mt-3">Tüm Logları Gör</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Upload Modal -->
+<div class="modal fade" id="cookieModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cookie Yükle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="cookieForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="cookieFile" class="form-label">Cookie Dosyası (JSON)</label>
+                        <input type="file" class="form-control" id="cookieFile" name="cookie" accept=".json" required>
+                    </div>
+                    <div class="alert alert-info">
+                        <small>
+                            <i class="fas fa-info-circle"></i>
+                            Cookie dosyası <code>sahibinden_cookies.json</code> olmalı.
+                        </small>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-primary" onclick="uploadCookie()">Yükle</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function startScraper() {
+    $.post('/api/scraper/start', function(data) {
+        if (data.success) {
+            alert('Scraper başlatıldı!');
+            location.reload();
+        } else {
+            alert('Hata: ' + data.message);
+        }
+    });
+}
+
+function stopScraper() {
+    $.post('/api/scraper/stop', function(data) {
+        alert(data.message);
+        location.reload();
+    });
+}
+
+function runNow() {
+    $.post('/api/scraper/run-now', function(data) {
+        if (data.success) {
+            alert('Manuel scrape başlatıldı! Loglara bakın.');
+        } else {
+            alert('Hata: ' + data.message);
+        }
+    });
+}
+
+function uploadCookie() {
+    var formData = new FormData($('#cookieForm')[0]);
+    $.ajax({
+        url: '/api/cookie/upload',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(data) {
+            if (data.success) {
+                alert('Cookie başarıyla yüklendi!');
+                $('#cookieModal').modal('hide');
+                location.reload();
+            } else {
+                alert('Hata: ' + data.message);
+            }
+        }
+    });
+}
+
+// Auto-refresh stats every 10 seconds
+setInterval(function() {
+    $.get('/api/stats', function(data) {
+        $('#status-text').text(data.scraper_running ? 'Çalışıyor' : 'Durdu');
+    });
+}, 10000);
+
+// WebSocket for real-time logs
+var socket = io();
+socket.on('connect', function() {
+    console.log('Connected to WebSocket');
+});
+
+socket.on('logs_update', function(data) {
+    var container = $('#log-container');
+    container.empty();
+    data.logs.forEach(function(log) {
+        container.append('<div class="log-line">' + log + '</div>');
+    });
+    container.scrollTop(container[0].scrollHeight);
+});
+
+// Request logs every 5 seconds
+setInterval(function() {
+    socket.emit('request_logs');
+}, 5000);
+</script>
+{% endblock %}

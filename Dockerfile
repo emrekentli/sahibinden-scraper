@@ -60,4 +60,7 @@ ENV CHROME_BIN=/usr/bin/google-chrome
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
+# Flask dashboard port
+EXPOSE 5000
+
 CMD ["/start.sh"]

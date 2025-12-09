@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}İlanlar - Sahibinden Scraper{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="card-title mb-0"><i class="fas fa-list"></i> Tüm İlanlar ({{ listings|length }})</h5>
+                    <a href="/" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left"></i> Geri
+                    </a>
+                </div>
+
+                {% if listings %}
+                <div class="row">
+                    {% for listing in listings %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card listing-card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title">
+                                        <span class="badge bg-primary">{{ listing.brand }}</span>
+                                    </h6>
+                                    <span class="badge bg-success">{{ listing.price }}</span>
+                                </div>
+
+                                <p class="card-text small">{{ listing.title }}</p>
+
+                                <div class="mb-2">
+                                    <small class="text-muted">
+                                        <i class="fas fa-calendar"></i> {{ listing.year }}
+                                        &nbsp;|&nbsp;
+                                        <i class="fas fa-road"></i> {{ listing.km }}
+                                    </small>
+                                </div>
+
+                                <div class="mb-2">
+                                    <small class="text-muted">
+                                        <i class="fas fa-map-marker-alt"></i> {{ listing.location }}
+                                    </small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <span class="badge bg-warning text-dark">
+                                        <i class="fas fa-paint-brush"></i> {{ listing.damage_info.painted_count }} Boyalı
+                                    </span>
+                                    <span class="badge bg-danger">
+                                        <i class="fas fa-wrench"></i> {{ listing.damage_info.replaced_count }} Değişen
+                                    </span>
+                                    {% if not listing.damage_info.hood_damaged %}
+                                    <span class="badge bg-success">
+                                        <i class="fas fa-check"></i> Kaput Temiz
+                                    </span>
+                                    {% endif %}
+                                </div>
+
+                                {% if listing.damage_info.painted_parts %}
+                                <div class="mb-2">
+                                    <small><strong>Boyalı:</strong> {{ listing.damage_info.painted_parts|join(', ') }}</small>
+                                </div>
+                                {% endif %}
+
+                                {% if listing.damage_info.replaced_parts %}
+                                <div class="mb-2">
+                                    <small><strong>Değişen:</strong> {{ listing.damage_info.replaced_parts|join(', ') }}</small>
+                                </div>
+                                {% endif %}
+
+                                <a href="{{ listing.url }}" target="_blank" class="btn btn-primary btn-sm w-100">
+                                    <i class="fas fa-external-link-alt"></i> İlanı Aç
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i> Henüz ilan bulunamadı. Scraper'ı başlatın ve bekleyin.
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -16,6 +16,6 @@ if ! ps -p $XVFB_PID > /dev/null; then
 fi
 
 echo "=== Xvfb is running ==="
-echo "=== Starting scraper ==="
+echo "=== Starting Flask Dashboard ==="
 cd /app
-exec python sahibinden_scraper.py
+exec python dashboard.py

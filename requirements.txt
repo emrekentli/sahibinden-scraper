@@ -4,4 +4,8 @@ schedule==1.2.0
 python-dotenv==1.0.0
 selenium==4.15.2
 undetected-chromedriver==3.5.4
+flask==3.0.0
+flask-socketio==5.3.5
+python-engineio==4.8.0
+python-socketio==5.10.0
 
