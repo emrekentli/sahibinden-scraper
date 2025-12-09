@@ -54,6 +54,32 @@ RUN mkdir -p /app/data
 
 # Chrome çalıştırma için gerekli
 ENV DISPLAY=:99
+ENV CHROME_BIN=/usr/bin/google-chrome
 
-# Xvfb (virtual display) başlat ve uygulamayı çalıştır
-CMD Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & python sahibinden_scraper.py
+# Startup script oluştur
+COPY <<EOF /start.sh
+#!/bin/bash
+set -e
+echo "=== Starting Xvfb ==="
+Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp -ac +extension GLX +render -noreset &
+XVFB_PID=\$!
+echo "Xvfb started with PID \$XVFB_PID"
+
+# Xvfb'nin başlamasını bekle
+sleep 5
+
+# Verify Xvfb is running
+if ! ps -p \$XVFB_PID > /dev/null; then
+    echo "ERROR: Xvfb failed to start!"
+    exit 1
+fi
+
+echo "=== Xvfb is running ==="
+echo "=== Starting scraper ==="
+cd /app
+exec python sahibinden_scraper.py
+EOF
+
+RUN chmod +x /start.sh
+
+CMD ["/start.sh"]
