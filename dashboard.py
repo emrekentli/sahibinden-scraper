@@ -5,14 +5,15 @@ import os
 import threading
 import time
 from datetime import datetime
-from sahibinden_scraper import SahibindenScraper
+import subprocess
+import sys
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'sahibinden-scraper-secret-2024'
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Global scraper instance
-scraper_instance = None
+# Global scraper state
+scraper_process = None
 scraper_thread = None
 scraper_running = False
 
@@ -64,14 +65,16 @@ def get_logs(limit=100):
 
 def scraper_background_task():
     """Background task to run scraper"""
-    global scraper_running
+    global scraper_running, scraper_process
     try:
-        scraper = SahibindenScraper()
-        scraper.run()
+        # Run scraper as subprocess
+        scraper_process = subprocess.Popen([sys.executable, 'sahibinden_scraper.py'])
+        scraper_process.wait()
     except Exception as e:
         print(f"Scraper error: {e}")
     finally:
         scraper_running = False
+        scraper_process = None
 
 @app.route('/')
 def index():
@@ -147,17 +150,19 @@ def start_scraper():
 @app.route('/api/scraper/stop', methods=['POST'])
 def stop_scraper():
     """Stop scraper"""
-    global scraper_running
+    global scraper_running, scraper_process
     scraper_running = False
-    return jsonify({'success': True, 'message': 'Scraper stop requested'})
+    if scraper_process:
+        scraper_process.terminate()
+        scraper_process = None
+    return jsonify({'success': True, 'message': 'Scraper stopped'})
 
 @app.route('/api/scraper/run-now', methods=['POST'])
 def run_scraper_now():
     """Run scraper once manually"""
     try:
-        scraper = SahibindenScraper()
-        # Run in a thread so we can return immediately
-        threading.Thread(target=scraper.run_single_check, daemon=True).start()
+        # Run scraper in background
+        subprocess.Popen([sys.executable, 'sahibinden_scraper.py'])
         return jsonify({'success': True, 'message': 'Manual scrape started'})
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)})
