@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Clean up old Xvfb lock files
+rm -f /tmp/.X99-lock
+
 echo "=== Starting Xvfb ==="
 Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp -ac +extension GLX +render -noreset &
 XVFB_PID=$!

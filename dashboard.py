@@ -216,5 +216,5 @@ def handle_request_logs():
     emit('logs_update', {'logs': logs})
 
 if __name__ == '__main__':
-    # Start Flask with SocketIO
-    socketio.run(app, host='0.0.0.0', port=5000, debug=False)
+    # Start Flask with SocketIO (production mode)
+    socketio.run(app, host='0.0.0.0', port=5000, debug=False, allow_unsafe_werkzeug=True)
