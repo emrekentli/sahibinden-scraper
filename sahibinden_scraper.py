@@ -29,7 +29,9 @@ class SahibindenScraper:
         self.filtered_listings = []
         # Docker volume'da saklamak için /app/data kullan, yoksa mevcut dizin
         import os
-        self.seen_ads_file = '/app/data/seen_ads.json' if os.path.exists('/app/data') else 'seen_ads.json'
+        self.data_dir = '/app/data' if os.path.exists('/app/data') else '.'
+        self.seen_ads_file = os.path.join(self.data_dir, 'seen_ads.json')
+        self.cookies_file = os.path.join(self.data_dir, 'sahibinden_cookies.json')
         self.seen_ads = self.load_seen_ads()
         self.email_sender = EmailSender()
 
@@ -56,6 +58,83 @@ class SahibindenScraper:
     def save_seen_ads(self):
         with open(self.seen_ads_file, 'w', encoding='utf-8') as f:
             json.dump(list(self.seen_ads), f, ensure_ascii=False, indent=2)
+
+    def save_cookies(self):
+        """Browser cookies'lerini kaydet"""
+        try:
+            cookies = self.driver.get_cookies()
+            with open(self.cookies_file, 'w', encoding='utf-8') as f:
+                json.dump(cookies, f, ensure_ascii=False, indent=2)
+            logging.info(f"Cookies saved to {self.cookies_file}")
+        except Exception as e:
+            logging.error(f"Error saving cookies: {e}")
+
+    def load_cookies(self):
+        """Kaydedilmiş cookies'leri yükle"""
+        try:
+            import os
+            if not os.path.exists(self.cookies_file):
+                logging.info("No saved cookies found")
+                return False
+
+            with open(self.cookies_file, 'r', encoding='utf-8') as f:
+                cookies = json.load(f)
+
+            # Önce sahibinden.com'a git (cookie eklemek için domain gerekli)
+            self.driver.get('https://www.sahibinden.com')
+            time.sleep(2)
+
+            # Cookies'leri ekle
+            for cookie in cookies:
+                try:
+                    # expiry problemi olabilir, sil
+                    if 'expiry' in cookie:
+                        cookie['expiry'] = int(cookie['expiry'])
+                    self.driver.add_cookie(cookie)
+                except Exception as e:
+                    logging.debug(f"Could not add cookie {cookie.get('name')}: {e}")
+
+            logging.info(f"Loaded {len(cookies)} cookies")
+            return True
+        except Exception as e:
+            logging.error(f"Error loading cookies: {e}")
+            return False
+
+    def handle_login_if_needed(self, max_wait_seconds=300):
+        """Login sayfasındaysa kullanıcıdan login olmasını bekle"""
+        current_url = self.driver.current_url
+
+        if 'login' not in current_url.lower() and 'secure.sahibinden.com' not in current_url:
+            return True  # Login'e gerek yok
+
+        logging.warning("=" * 60)
+        logging.warning("LOGIN REQUIRED!")
+        logging.warning("=" * 60)
+        logging.warning(f"Current URL: {current_url}")
+        logging.warning("")
+        logging.warning("Please login manually in the browser window:")
+        logging.warning("1. Enter your username/email and password")
+        logging.warning("2. Complete OTP verification")
+        logging.warning("3. Wait until you see the main page")
+        logging.warning("")
+        logging.warning(f"Waiting up to {max_wait_seconds} seconds for login...")
+        logging.warning("=" * 60)
+
+        # Login tamamlanana kadar bekle (login kelimesi URL'den kaybolana kadar)
+        start_time = time.time()
+        while time.time() - start_time < max_wait_seconds:
+            current_url = self.driver.current_url
+            if 'login' not in current_url.lower() and 'secure.sahibinden.com' not in current_url:
+                logging.info("Login successful!")
+                # Cookies'leri kaydet
+                time.sleep(3)  # Sayfanın tamamen yüklenmesi için
+                self.save_cookies()
+                return True
+
+            time.sleep(2)
+
+        logging.error("Login timeout - user did not complete login in time")
+        return False
 
     def get_chrome_options(self):
         """Chrome options oluştur - her seferinde yeni object"""
@@ -105,6 +184,9 @@ class SahibindenScraper:
             except Exception as js_error:
                 logging.warning(f"Could not inject stealth JavaScript: {js_error}")
 
+            # Saved cookies varsa yükle
+            self.load_cookies()
+
         except Exception as e:
             logging.error(f"Error initializing driver: {e}")
             # Fallback olarak version_main belirterek dene - YENİ options object kullan
@@ -123,6 +205,10 @@ class SahibindenScraper:
                     logging.info("Stealth JavaScript injected successfully")
                 except Exception as js_error:
                     logging.warning(f"Could not inject stealth JavaScript: {js_error}")
+
+                # Saved cookies varsa yükle
+                self.load_cookies()
+
             except Exception as retry_error:
                 logging.error(f"Failed to initialize driver even with version 131: {retry_error}")
                 raise
@@ -156,20 +242,19 @@ class SahibindenScraper:
         # Login sayfasına yönlendirildik mi kontrol et
         current_url = self.driver.current_url
         if 'login' in current_url.lower() or 'secure.sahibinden.com' in current_url:
-            logging.warning("Redirected to login page - bot detection active")
+            logging.warning("Redirected to login page")
             logging.info(f"Current URL: {current_url}")
-            logging.info("Trying to reload the page...")
 
-            # Biraz bekle ve tekrar dene
-            time.sleep(10)
-            self.driver.get(url)
-            time.sleep(8)
-
-            # Hala login sayfasındaysak, vazgeç
-            if 'login' in self.driver.current_url.lower():
-                logging.error("Still on login page after retry - skipping this brand")
-                self.driver.save_screenshot("login_redirect.png")
+            # Manuel login'i bekle
+            if not self.handle_login_if_needed():
+                logging.error("Login failed or timeout - skipping this brand")
+                self.driver.save_screenshot("login_failed.png")
                 return []
+
+            # Login başarılı, sayfayı yeniden yükle
+            logging.info("Login successful, reloading search page...")
+            self.driver.get(url)
+            time.sleep(7)
 
         # Cloudflare challenge kontrolü
         if self.handle_cloudflare_challenge():
@@ -261,14 +346,16 @@ class SahibindenScraper:
 
         # Login kontrolü
         if 'login' in self.driver.current_url.lower():
-            logging.warning("Redirected to login on detail page - retrying...")
-            time.sleep(8)
+            logging.warning("Redirected to login on detail page")
+
+            # Manuel login'i bekle
+            if not self.handle_login_if_needed():
+                logging.error("Login failed - cannot get damage info")
+                return None
+
+            # Login başarılı, detail sayfasını yeniden yükle
             self.driver.get(listing_url)
             time.sleep(5)
-
-            if 'login' in self.driver.current_url.lower():
-                logging.error("Still on login page - cannot get damage info")
-                return None
 
         if self.handle_cloudflare_challenge():
             logging.info("Cloudflare challenge handled on detail page, continuing...")
