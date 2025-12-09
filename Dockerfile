@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     xvfb \
     libxi6 \
-    libgconf-2-4 \
     libnss3 \
     libxss1 \
     libappindicator3-1 \
@@ -26,6 +25,7 @@ RUN apt-get update && apt-get install -y \
     libxdamage1 \
     libxrandr2 \
     fonts-liberation \
+    ca-certificates \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
