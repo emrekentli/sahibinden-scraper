@@ -76,6 +76,21 @@ class SahibindenScraper:
         except Exception:
             pass
 
+        if running is not None:
+            status['running'] = running
+        if login_waiting is not None:
+            status['login_waiting'] = login_waiting
+        if message is not None:
+            status['message'] = message
+
+        status['timestamp'] = datetime.now().isoformat()
+
+        try:
+            with open(self.status_file, 'w', encoding='utf-8') as f:
+                json.dump(status, f, ensure_ascii=False, indent=2)
+        except Exception:
+            pass
+
     def consume_otp_code(self):
         """Read OTP code once and delete the file"""
         try:
@@ -92,20 +107,33 @@ class SahibindenScraper:
             logging.debug(f"Could not read OTP code: {e}")
             return None
 
-        if running is not None:
-            status['running'] = running
-        if login_waiting is not None:
-            status['login_waiting'] = login_waiting
-        if message is not None:
-            status['message'] = message
-
-        status['timestamp'] = datetime.now().isoformat()
-
+    def is_rate_limited(self):
+        """Detect too-many-requests block page"""
         try:
-            with open(self.status_file, 'w', encoding='utf-8') as f:
-                json.dump(status, f, ensure_ascii=False, indent=2)
+            return bool(self.driver.find_elements(By.CSS_SELECTOR, ".error-page-container.too-many-requests"))
         except Exception:
-            pass
+            return False
+
+    def handle_rate_limit_wait(self, wait_seconds=900, retries=2):
+        """
+        If rate limit page is shown, wait in 15-minute chunks (default 2 tries).
+        Returns True if page is cleared, False if still blocked after retries.
+        """
+        for attempt in range(retries):
+            if not self.is_rate_limited():
+                return True
+            logging.warning(f"Rate limit page detected (attempt {attempt+1}/{retries}). Waiting {wait_seconds//60} minutes...")
+            self.update_status(message=f"Rate limit tespit edildi, {wait_seconds//60} dk bekleniyor (deneme {attempt+1}/{retries})")
+            time.sleep(wait_seconds)
+            logging.info("Retrying after wait...")
+            self.driver.refresh()
+            time.sleep(5)
+
+        if self.is_rate_limited():
+            logging.error("Still blocked by rate limit after retries")
+            self.update_status(message="Rate limit devam ediyor, tekrar deneyin veya bekleyin")
+            return False
+        return True
 
     def try_submit_otp_if_present(self):
         """If OTP form is visible and an OTP code file exists, submit it"""
@@ -444,6 +472,12 @@ class SahibindenScraper:
 
         # Daha uzun bekleme - insan gibi davranmak için
         time.sleep(5)
+
+        # Rate limit kontrolü: 15 dk bekle, tekrar aynıysa bir 15 dk daha bekle
+        if self.is_rate_limited():
+            if not self.handle_rate_limit_wait():
+                logging.warning("Rate limit kalkmadı, ilan atlanıyor")
+                return None
 
         # Login kontrolü
         if 'login' in self.driver.current_url.lower():
