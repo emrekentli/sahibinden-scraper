@@ -690,7 +690,7 @@ class SahibindenScraper:
             self.update_status(running=False, login_waiting=False, message="Scraper stopped")
 
     def save_results(self):
-        filename = 'filtered_listings.json'
+        filename = os.path.join(self.data_dir, 'filtered_listings.json')
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(self.filtered_listings, f, ensure_ascii=False, indent=2)
 
