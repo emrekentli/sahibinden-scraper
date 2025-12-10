@@ -108,9 +108,11 @@ class SahibindenScraper:
             return None
 
     def is_rate_limited(self):
-        """Detect too-many-requests block page"""
+        """Detect too-many-requests block page (URL or DOM)"""
         try:
-            return bool(self.driver.find_elements(By.CSS_SELECTOR, ".error-page-container.too-many-requests"))
+            url_block = 'olagan-disi-kullanim' in self.driver.current_url
+            dom_block = bool(self.driver.find_elements(By.CSS_SELECTOR, ".error-page-container.too-many-requests"))
+            return url_block or dom_block
         except Exception:
             return False
 
