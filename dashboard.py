@@ -23,6 +23,8 @@ CONFIG_FILE = 'config.json'
 LISTINGS_FILE = os.path.join(DATA_DIR, 'filtered_listings.json')
 LOG_FILE = 'sahibinden_scraper.log'
 COOKIES_FILE = os.path.join(DATA_DIR, 'sahibinden_cookies.json')
+STATUS_FILE = os.path.join(DATA_DIR, 'scraper_status.json')
+OTP_FILE = os.path.join(DATA_DIR, 'otp_code.json')
 
 def load_config():
     """Load config.json"""
@@ -63,6 +65,30 @@ def get_logs(limit=100):
     except:
         return []
 
+def load_status():
+    """Read scraper status shared file"""
+    default = {
+        'running': False,
+        'login_waiting': False,
+        'message': '',
+        'timestamp': None
+    }
+    try:
+        if os.path.exists(STATUS_FILE):
+            with open(STATUS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        return default
+    except Exception:
+        return default
+
+def write_status(status):
+    """Write scraper status file (best-effort)"""
+    try:
+        with open(STATUS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(status, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
 def scraper_background_task():
     """Background task to run scraper"""
     global scraper_running, scraper_process
@@ -82,16 +108,19 @@ def index():
     config = load_config()
     listings = load_listings()
     logs = get_logs(50)
+    status = load_status()
 
     stats = {
         'total_brands': len(config.get('brands', [])),
         'enabled_brands': len([b for b in config.get('brands', []) if b.get('enabled', True)]),
         'total_listings': len(listings),
-        'scraper_running': scraper_running,
+        'scraper_running': scraper_running or status.get('running', False),
         'check_interval': config.get('check_interval_minutes', 30),
         'max_replaced': config.get('max_replaced_parts', 1),
         'max_painted': config.get('max_painted_parts', 2),
-        'has_cookies': os.path.exists(COOKIES_FILE)
+        'has_cookies': os.path.exists(COOKIES_FILE),
+        'login_waiting': status.get('login_waiting', False),
+        'status_message': status.get('message', '')
     }
 
     return render_template('index.html', stats=stats, listings=listings[:10], logs=logs)
@@ -122,13 +151,16 @@ def api_stats():
     """Get current stats"""
     config = load_config()
     listings = load_listings()
+    status = load_status()
 
     return jsonify({
         'total_brands': len(config.get('brands', [])),
         'enabled_brands': len([b for b in config.get('brands', []) if b.get('enabled', True)]),
         'total_listings': len(listings),
-        'scraper_running': scraper_running,
+        'scraper_running': scraper_running or status.get('running', False),
         'check_interval': config.get('check_interval_minutes', 30),
+        'login_waiting': status.get('login_waiting', False),
+        'status_message': status.get('message', ''),
         'has_cookies': os.path.exists(COOKIES_FILE),
         'timestamp': datetime.now().isoformat()
     })
@@ -180,10 +212,37 @@ def upload_cookie():
 
         # Save cookie file
         cookie_file.save(COOKIES_FILE)
+        status = load_status()
+        status['message'] = f"New cookies uploaded at {datetime.now().isoformat()}"
+        write_status(status)
 
         return jsonify({'success': True, 'message': 'Cookie uploaded successfully'})
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)})
+
+@app.route('/api/otp', methods=['POST'])
+def submit_otp():
+    """Receive OTP code from dashboard and persist for scraper"""
+    try:
+        data = request.get_json(force=True, silent=True) or {}
+        code = str(data.get('code', '')).strip()
+        if not code or not code.isdigit() or len(code) < 4 or len(code) > 8:
+            return jsonify({'success': False, 'message': 'OTP must be 4-8 digits'}), 400
+
+        payload = {
+            'code': code,
+            'timestamp': datetime.now().isoformat()
+        }
+        with open(OTP_FILE, 'w', encoding='utf-8') as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+
+        status = load_status()
+        status['message'] = f"OTP submitted at {payload['timestamp']}"
+        write_status(status)
+
+        return jsonify({'success': True, 'message': 'OTP stored, scraper will try to submit it'})
+    except Exception as e:
+        return jsonify({'success': False, 'message': str(e)}), 500
 
 @app.route('/config')
 def config_page():

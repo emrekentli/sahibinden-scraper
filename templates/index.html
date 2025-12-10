@@ -62,11 +62,48 @@
                     <button class="btn btn-warning btn-custom" data-bs-toggle="modal" data-bs-target="#cookieModal">
                         <i class="fas fa-cookie"></i> Cookie Yükle
                     </button>
+                    <button class="btn btn-info btn-custom" data-bs-toggle="modal" data-bs-target="#otpModal">
+                        <i class="fas fa-key"></i> OTP Gönder
+                    </button>
                 </div>
                 <span class="ms-3">
                     <i class="fas fa-cookie-bite"></i>
                     Cookie: <strong>{{ 'Yüklü' if stats.has_cookies else 'Yok' }}</strong>
                 </span>
+            </div>
+            {% if stats.login_waiting %}
+            <div class="alert alert-warning mt-3 mb-0">
+                <i class="fas fa-key"></i> Login/OTP bekleniyor. Dashboard'dan yeni cookie yükleyin; scraper cookie'yi görünce otomatik devam eder.
+            </div>
+            {% elif stats.status_message %}
+            <div class="alert alert-info mt-3 mb-0">
+                <i class="fas fa-info-circle"></i> {{ stats.status_message }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- OTP Modal -->
+<div class="modal fade" id="otpModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">OTP Gönder</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="otpCode" class="form-label">OTP Kodu (4-8 hane)</label>
+                    <input type="text" class="form-control" id="otpCode" maxlength="8" pattern="\\d{4,8}" inputmode="numeric" placeholder="123456">
+                </div>
+                <div class="alert alert-info">
+                    <small><i class="fas fa-info-circle"></i> SMS kodunu buraya yazın; scraper OTP formunu görünce otomatik doldurur.</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-primary" onclick="submitOtp()">Gönder</button>
             </div>
         </div>
     </div>
@@ -213,6 +250,29 @@ function uploadCookie() {
                 alert('Cookie başarıyla yüklendi!');
                 $('#cookieModal').modal('hide');
                 location.reload();
+            } else {
+                alert('Hata: ' + data.message);
+            }
+        }
+    });
+}
+
+function submitOtp() {
+    const code = $('#otpCode').val().trim();
+    if (!code) {
+        alert('OTP kodunu girin');
+        return;
+    }
+    $.ajax({
+        url: '/api/otp',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ code: code }),
+        success: function(data) {
+            if (data.success) {
+                alert('OTP kaydedildi, scraper otomatik deneyecek.');
+                $('#otpModal').modal('hide');
+                $('#otpCode').val('');
             } else {
                 alert('Hata: ' + data.message);
             }

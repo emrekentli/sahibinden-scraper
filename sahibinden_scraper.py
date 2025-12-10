@@ -9,6 +9,7 @@ import json
 import logging
 import schedule
 from datetime import datetime
+import os
 from email_sender import EmailSender
 
 logging.basicConfig(
@@ -28,10 +29,11 @@ class SahibindenScraper:
         self.max_painted_parts = self.config.get('max_painted_parts', 2)
         self.filtered_listings = []
         # Docker volume'da saklamak için /app/data kullan, yoksa mevcut dizin
-        import os
         self.data_dir = '/app/data' if os.path.exists('/app/data') else '.'
         self.seen_ads_file = os.path.join(self.data_dir, 'seen_ads.json')
         self.cookies_file = os.path.join(self.data_dir, 'sahibinden_cookies.json')
+        self.status_file = os.path.join(self.data_dir, 'scraper_status.json')
+        self.otp_file = os.path.join(self.data_dir, 'otp_code.json')
         self.seen_ads = self.load_seen_ads()
         self.email_sender = EmailSender()
 
@@ -58,6 +60,78 @@ class SahibindenScraper:
     def save_seen_ads(self):
         with open(self.seen_ads_file, 'w', encoding='utf-8') as f:
             json.dump(list(self.seen_ads), f, ensure_ascii=False, indent=2)
+
+    def update_status(self, running=None, login_waiting=None, message=None):
+        """Persist scraper status so dashboard can read it"""
+        status = {
+            'running': False,
+            'login_waiting': False,
+            'message': '',
+            'timestamp': None
+        }
+        try:
+            if os.path.exists(self.status_file):
+                with open(self.status_file, 'r', encoding='utf-8') as f:
+                    status.update(json.load(f))
+        except Exception:
+            pass
+
+    def consume_otp_code(self):
+        """Read OTP code once and delete the file"""
+        try:
+            if not os.path.exists(self.otp_file):
+                return None
+            with open(self.otp_file, 'r', encoding='utf-8') as f:
+                payload = json.load(f)
+            code = str(payload.get('code', '')).strip()
+            os.remove(self.otp_file)
+            if code:
+                logging.info("OTP code received from dashboard")
+            return code or None
+        except Exception as e:
+            logging.debug(f"Could not read OTP code: {e}")
+            return None
+
+        if running is not None:
+            status['running'] = running
+        if login_waiting is not None:
+            status['login_waiting'] = login_waiting
+        if message is not None:
+            status['message'] = message
+
+        status['timestamp'] = datetime.now().isoformat()
+
+        try:
+            with open(self.status_file, 'w', encoding='utf-8') as f:
+                json.dump(status, f, ensure_ascii=False, indent=2)
+        except Exception:
+            pass
+
+    def try_submit_otp_if_present(self):
+        """If OTP form is visible and an OTP code file exists, submit it"""
+        otp_code = self.consume_otp_code()
+        if not otp_code:
+            return False
+
+        try:
+            code_input = self.driver.find_element(By.ID, "code")
+            code_input.clear()
+            code_input.send_keys(otp_code)
+
+            # Submit form
+            submit_btns = self.driver.find_elements(By.CSS_SELECTOR, "#twoFactorAuthenticationForm button[type='submit']")
+            if submit_btns:
+                submit_btns[0].click()
+            else:
+                code_input.submit()
+
+            logging.info("OTP submitted from dashboard")
+            self.update_status(login_waiting=True, message="OTP gönderildi, doğrulama bekleniyor")
+            time.sleep(3)
+            return True
+        except Exception as e:
+            logging.warning(f"OTP submit failed: {e}")
+            return False
 
     def save_cookies(self):
         """Browser cookies'lerini kaydet"""
@@ -100,8 +174,8 @@ class SahibindenScraper:
             logging.error(f"Error loading cookies: {e}")
             return False
 
-    def handle_login_if_needed(self, max_wait_seconds=300):
-        """Login sayfasındaysa kullanıcıdan login olmasını bekle"""
+    def handle_login_if_needed(self, resume_url=None, poll_seconds=5, heartbeat_seconds=60):
+        """Login sayfasındaysa cookie/OTP bekleyip yeni cookie yüklenince devam eder"""
         current_url = self.driver.current_url
 
         if 'login' not in current_url.lower() and 'secure.sahibinden.com' not in current_url:
@@ -112,29 +186,56 @@ class SahibindenScraper:
         logging.warning("=" * 60)
         logging.warning(f"Current URL: {current_url}")
         logging.warning("")
-        logging.warning("Please login manually in the browser window:")
-        logging.warning("1. Enter your username/email and password")
-        logging.warning("2. Complete OTP verification")
-        logging.warning("3. Wait until you see the main page")
-        logging.warning("")
-        logging.warning(f"Waiting up to {max_wait_seconds} seconds for login...")
+        logging.warning("Please login in the browser OR upload fresh cookies via dashboard.")
+        logging.warning("1. Email/kullanıcı adı ve şifreyi girin")
+        logging.warning("2. OTP doğrulamasını tamamlayın")
+        logging.warning("   veya dashboard'da yeni cookie yükleyin")
+        logging.warning("3. Ana sayfaya yönlenene kadar bekleyin")
         logging.warning("=" * 60)
 
-        # Login tamamlanana kadar bekle (login kelimesi URL'den kaybolana kadar)
-        start_time = time.time()
-        while time.time() - start_time < max_wait_seconds:
+        last_cookie_mtime = os.path.getmtime(self.cookies_file) if os.path.exists(self.cookies_file) else 0
+        heartbeat_at = time.time()
+        self.update_status(login_waiting=True, message="Login/OTP gerekli - dashboard'dan yeni cookie yükleyin")
+
+        while True:
             current_url = self.driver.current_url
             if 'login' not in current_url.lower() and 'secure.sahibinden.com' not in current_url:
                 logging.info("Login successful!")
-                # Cookies'leri kaydet
                 time.sleep(3)  # Sayfanın tamamen yüklenmesi için
                 self.save_cookies()
+                self.update_status(login_waiting=False, message="Login tamamlandı, scraping devam ediyor")
                 return True
 
-            time.sleep(2)
+            # Try to submit OTP if form is present and code supplied
+            try:
+                if self.driver.find_elements(By.ID, "twoFactorAuthenticationForm") and self.driver.find_elements(By.ID, "code"):
+                    self.try_submit_otp_if_present()
+            except Exception:
+                pass
 
-        logging.error("Login timeout - user did not complete login in time")
-        return False
+            try:
+                if os.path.exists(self.cookies_file):
+                    new_mtime = os.path.getmtime(self.cookies_file)
+                    if new_mtime > last_cookie_mtime:
+                        logging.info("New cookies detected, reloading and retrying login...")
+                        last_cookie_mtime = new_mtime
+                        self.load_cookies()
+                        if resume_url:
+                            self.driver.get(resume_url)
+                        else:
+                            self.driver.refresh()
+                        time.sleep(5)
+                        continue
+            except Exception as e:
+                logging.debug(f"Cookie reload check failed: {e}")
+
+            now = time.time()
+            if now - heartbeat_at >= heartbeat_seconds:
+                logging.warning("Still waiting for login/OTP or fresh cookies... upload via dashboard if needed.")
+                heartbeat_at = now
+                self.update_status(login_waiting=True, message="Login/OTP gerekli - dashboard'dan yeni cookie yükleyin")
+
+            time.sleep(poll_seconds)
 
     def get_chrome_options(self):
         """Chrome options oluştur - her seferinde yeni object"""
@@ -246,7 +347,7 @@ class SahibindenScraper:
             logging.info(f"Current URL: {current_url}")
 
             # Manuel login'i bekle
-            if not self.handle_login_if_needed():
+            if not self.handle_login_if_needed(resume_url=url):
                 logging.error("Login failed or timeout - skipping this brand")
                 self.driver.save_screenshot("login_failed.png")
                 return []
@@ -349,7 +450,7 @@ class SahibindenScraper:
             logging.warning("Redirected to login on detail page")
 
             # Manuel login'i bekle
-            if not self.handle_login_if_needed():
+            if not self.handle_login_if_needed(resume_url=listing_url):
                 logging.error("Login failed - cannot get damage info")
                 return None
 
@@ -487,6 +588,7 @@ class SahibindenScraper:
         self.filtered_listings = []
 
         try:
+            self.update_status(running=True, login_waiting=False, message="Scrape cycle started")
             if not self.driver:
                 self.init_driver()
 
@@ -494,6 +596,7 @@ class SahibindenScraper:
 
             if not enabled_brands:
                 logging.warning("No enabled brands in config")
+                self.update_status(message="No enabled brands in config")
                 return
 
             for brand in enabled_brands:
@@ -550,6 +653,7 @@ class SahibindenScraper:
 
         except Exception as e:
             logging.error(f"Error during scraping: {e}", exc_info=True)
+            self.update_status(message=f"Error during scraping: {e}")
 
     def run(self):
         try:
@@ -557,6 +661,7 @@ class SahibindenScraper:
             logging.info(f"Check interval: {self.config.get('check_interval_minutes', 30)} minutes")
             logging.info(f"Max replaced parts: {self.max_replaced_parts}")
             logging.info(f"Max painted parts: {self.max_painted_parts}")
+            self.update_status(running=True, login_waiting=False, message="Scraper started")
 
             self.run_single_check()
 
@@ -574,6 +679,7 @@ class SahibindenScraper:
             logging.info("\nStopping scraper...")
         except Exception as e:
             logging.error(f"Error in main loop: {e}", exc_info=True)
+            self.update_status(message=f"Error in main loop: {e}")
         finally:
             if self.driver:
                 logging.info("Closing browser...")
@@ -581,6 +687,7 @@ class SahibindenScraper:
                     self.driver.quit()
                 except:
                     pass
+            self.update_status(running=False, login_waiting=False, message="Scraper stopped")
 
     def save_results(self):
         filename = 'filtered_listings.json'
