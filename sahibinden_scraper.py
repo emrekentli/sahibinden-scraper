@@ -370,6 +370,12 @@ class SahibindenScraper:
         # İlk bekleme - sayfanın yüklenmesi için
         time.sleep(7)
 
+        # Rate limit kontrolü: 15 dk bekle, tekrar aynıysa bir 15 dk daha bekle
+        if self.is_rate_limited():
+            if not self.handle_rate_limit_wait():
+                logging.warning("Rate limit kalkmadı, arama sayfası atlanıyor")
+                return []
+
         # Login sayfasına yönlendirildik mi kontrol et
         current_url = self.driver.current_url
         if 'login' in current_url.lower() or 'secure.sahibinden.com' in current_url:
